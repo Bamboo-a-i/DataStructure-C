@@ -1,0 +1,17 @@
+# ninja log v5
+2	74	6750259344922217	Course/LinerList/CMakeFiles/LinkList.dir/LinkList.c.obj	1d5bd1bfcddb781a
+0	210	6750265539340030	build.ninja	9921fb622450a139
+66	161	6750251595564474	x2.exe	7ba1087d1868755d
+0	60	6750243871406997	CMakeFiles/Scanf_lib.dir/Status.c.obj	ab9985863e07afd7
+61	266	6750243873470145	libScanf_lib.a	d7edb5ca0ad445a7
+0	65	6750251594636952	CMakeFiles/x2.dir/Status.c.obj	ebe1fe7c90c2e70c
+0	81	6750251650266582	CMakeFiles/xx.dir/Course/LinerList/LinkList.c.obj	31619c0e7eaf5d07
+231	344	6750264861730319	Course/LinerList/LinkList.exe	7f18aa37d7a87956
+0	89	6750264859210046	Status/CMakeFiles/Scanf_lib.dir/Status.c.obj	6e8c3392da42b296
+82	171	6750251651134266	xx.exe	bb7d3edf0dd3e7f0
+100	231	6750264860633271	Status/libScanf_lib.a	bb470e6b98d55cbf
+6	104	6750264859350016	Course/LinerList/CMakeFiles/LinkList.dir/DLinkNode.c.obj	6e404bdccdf9b2d4
+2	91	6750265942157430	Status/CMakeFiles/Scanf_lib.dir/Status.c.obj	6e8c3392da42b296
+8	103	6750265942287088	Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/Stack.c.obj	d9bed69030e78e91
+91	286	6750265944121829	Status/libScanf_lib.a	bb470e6b98d55cbf
+286	385	6750265945059330	Course/StackQueueArray/StackQueueArray.exe	1b8a17403d050b0b

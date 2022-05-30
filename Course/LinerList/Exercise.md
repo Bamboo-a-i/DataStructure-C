@@ -1,55 +1,16 @@
-//
-// Created by cxf18 on 2022/5/22.
-//
+# 1-课后习题03(P85)
 
-#include "Exercises.h"
+## 题目:
+利用栈S1和S2来模拟队列操作.
+已知:栈有判空/满/Pop/Push 操作
+实现:队列的EnQueue/Dequeue/Empty操作
 
-int main()
-{
-    setbuf(stdout,0);
-    SqStack S1,S2;
-    PressEnterToContinue(false);
-    printf("@@1-课后习题03(P85)--");
-    {
-        printf("开始\n");
-        S1.top = S2.top = -1;
-        ElemType e = 0;
-        EnQueue(&S1,&S2,1);
-        EnQueue(&S1,&S2,2);
-        EnQueue(&S1,&S2,3);
-        EnQueue(&S1,&S2,4);
-        EnQueue(&S1,&S2,5);
-        DeQueue(&S1,&S2,&e);
-        printf("e:%d\n",e);
-        DeQueue(&S1,&S2,&e);
-        printf("e:%d\n",e);
-        DeQueue(&S1,&S2,&e);
-        printf("e:%d\n",e);
-        DeQueue(&S1,&S2,&e);
-        printf("e:%d\n",e);
-        DeQueue(&S1,&S2,&e);
-        printf("e:%d\n",e);
-        Empty(S1,S2);
-    }
+## 分析:
+- 入队操作:可以拆分为先入栈S1-->如果S2为空且栈中已满,则将所有的元素出栈在入栈到S2中.
+- 出队操作:若S1不为空则执行出栈,否则输出空.在否则如果S1中还有元素可以被Pop到S2中,则继续Pop(S1),Push(S2);
 
-    PressEnterToContinue(false);
-    printf("@@2-课后习题01(P96)--");
-    {
-        printf("开始\n");
-        char *kuoHao = "[{()}]";
-        MatchKuoHao(kuoHao);
-    }
-
-    PressEnterToContinue(false);
-    printf("@@3-课后习题02(P96)");
-    {
-        printf("开始\n");
-        char *str = "HHHSSSHHSHSHSH";
-        TrainArrange(str);
-
-    }
-}
-
+## 实现:
+```c
 bool EnQueue(SqStack *S1,SqStack *S2,ElemType e)
 {
     if(!SOverFlow(*S1)) // S1未满执行
@@ -137,6 +98,29 @@ bool Pop(SqStack *S,ElemType *e)
     (*e) = (*S).data[(*S).top--];
     return true;
 }
+```
+
+# 2-课后习题01(P96)
+
+## 题目:
+-假设一个算术表达式中包含圆括号、方括号和花括号3种类型的括号,编写一个算法来判别表达式中的括号是否配对，以字符“O”作为算术表达式的结束符。
+
+## 分析：
+- 基本思想是扫描遇到的所有的括号根据遇到的类型进行入栈和出栈操作，
+  - 左括号：入栈
+  - 右括号：判断是否匹配在出栈
+  - 判空：确定栈中的所有括号均被匹配
+
+## 实现:
+- 参数：char *
+- switch 判断
+
+```c
+typedef struct
+{
+    char *data;
+    int top;
+}SqStack1;
 
 bool PushC(SqStack1 *S1,char e)
 {
@@ -206,34 +190,15 @@ bool MatchKuoHao(char *str)
     else
         return false;
 }
+```
 
-bool TrainArrange(char *train)
-{
-    SqStack1 S1;
-    char *p = train,*q = train,c;
-    // H:硬座;S:软座
-    S1.top = -1;
-    while (*p)
-    {
-        if(*p == 'H')
-        {
-            PushC(&S1,*p); //将硬座入栈
-            printf("%c\n",*p);
-        }
-        else
-        {
-            *(q++) = *p; // 对已经检查出来的软座进行编排 -- 此句会报内存访问的错误慎用。
-            printf("%c\n",*q);
-        }
+# 3-课后习题02(P96)
 
-        p++;
-    }
-    while (!CEmpty(S1))
-    {
-        PopC(&S1,&c);
-        printf("pop e:%c\n",c);
-        *(q++) = c; // 将硬座街上软座
-        printf("q:%s",q);
-    }
-    return true;
-}
+## 题目
+按下图所示铁道进行车厢调度（注意，两侧铁道均为单向行驶道，火车调度站有一个用于调度的“栈道”)， 火车调度站的入口处有n节硬座和软座车厢（分别用H和S表示)等待调度， 试编写算法，输出对这n节车厢进行调度的操作(即入栈或出栈操作)序列，以使所有的软座车厢都被调整到硬座车厢之前。
+
+![3.栈_队列_数组-2022-05-27-22-07-47](https://iceimgurl.oss-cn-beijing.aliyuncs.com/markdownimage/3.栈_队列_数组-2022-05-27-22-07-47.png)
+
+## 分析:
+- 逐个检查所有的元素,对硬座进行入栈,等待最后的调度,检查完后车道中全部都是软座在将硬座pop出
+- 

@@ -114,14 +114,17 @@
 			"path" : "Course/StackQueueArray/CMakeLists.txt"
 		},
 		{
+			"path" : "Course/String/CMakeLists.txt"
+		},
+		{
 			"path" : "Exercise/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "E:/DataStructure/cmake-build-debug",
-		"source" : "E:/DataStructure"
+		"build" : "E:/Project/DataStructure/cmake-build-debug",
+		"source" : "E:/Project/DataStructure"
 	},
 	"version" : 
 	{

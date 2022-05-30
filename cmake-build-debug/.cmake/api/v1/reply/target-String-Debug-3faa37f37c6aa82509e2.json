@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Course/StackQueueArray/StackQueueArray.exe"
+			"path" : "Course/String/String.exe"
 		},
 		{
-			"path" : "Course/StackQueueArray/StackQueueArray.pdb"
+			"path" : "Course/String/String.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"Course/StackQueueArray/CMakeLists.txt"
+			"Course/String/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -62,7 +62,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "E:/DataStructure/Status"
+					"path" : "E:/Project/DataStructure/Status"
 				}
 			],
 			"language" : "C",
@@ -84,10 +84,10 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "Scanf_lib::@fe314c4577536ad9eb12"
+			"id" : "Global_lib::@fe314c4577536ad9eb12"
 		}
 	],
-	"id" : "StackQueueArray::@46988698c8098a46d5dc",
+	"id" : "String::@10c5aa9f6078be14522a",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -102,7 +102,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "Status\\libScanf_lib.a",
+				"fragment" : "Status\\libGlobal_lib.a",
 				"role" : "libraries"
 			},
 			{
@@ -112,12 +112,12 @@
 		],
 		"language" : "C"
 	},
-	"name" : "StackQueueArray",
-	"nameOnDisk" : "StackQueueArray.exe",
+	"name" : "String",
+	"nameOnDisk" : "String.exe",
 	"paths" : 
 	{
-		"build" : "Course/StackQueueArray",
-		"source" : "Course/StackQueueArray"
+		"build" : "Course/String",
+		"source" : "Course/String"
 	},
 	"sourceGroups" : 
 	[
@@ -134,7 +134,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Course/StackQueueArray/Stack.c",
+			"path" : "Course/String/String.c",
 			"sourceGroupIndex" : 0
 		}
 	],

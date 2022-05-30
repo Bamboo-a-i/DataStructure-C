@@ -12,6 +12,7 @@
 extern bool debug;   // 是否使用debug模式
 
 typedef  int ElemType;
+#define Maxsize 10
 /*
  * 摁下回车键以继续运行。
  *

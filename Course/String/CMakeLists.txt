@@ -2,6 +2,6 @@
 include_directories(${CMAKE_SOURCE_DIR}/Status)
 
 # 生成可执行文件
-add_executable(LinkList DLinkNode.h DLinkNode.c)
+add_executable(String String.c)
 # 链接公共库
-target_link_libraries(LinkList Global_lib)
+target_link_libraries(String Global_lib)

@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Status/libScanf_lib.a"
+			"path" : "Status/libGlobal_lib.a"
 		}
 	],
 	"backtrace" : 1,
@@ -57,9 +57,9 @@
 			]
 		}
 	],
-	"id" : "Scanf_lib::@fe314c4577536ad9eb12",
-	"name" : "Scanf_lib",
-	"nameOnDisk" : "libScanf_lib.a",
+	"id" : "Global_lib::@fe314c4577536ad9eb12",
+	"name" : "Global_lib",
+	"nameOnDisk" : "libGlobal_lib.a",
 	"paths" : 
 	{
 		"build" : "Status",

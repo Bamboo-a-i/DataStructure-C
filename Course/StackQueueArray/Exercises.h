@@ -13,6 +13,12 @@ typedef struct
     int top;
 }SqStack;
 
+typedef struct
+{
+    char *data;
+    int top;
+}SqStack1;
+
 bool EnQueue(SqStack *S1,SqStack *S2,ElemType e);
 
 bool DeQueue(SqStack *S1,SqStack *S2,ElemType *e);
@@ -26,3 +32,13 @@ bool SOverFlow(SqStack S);
 bool Push(SqStack *S,ElemType e);
 
 bool Pop(SqStack *S,ElemType *e);
+
+bool MatchKuoHao(char *str);
+
+bool PushC(SqStack1 *S1,char e);
+
+bool PopC(SqStack1 *S1,char *e);
+
+bool CEmpty(SqStack1 S1);
+
+bool TrainArrange(char *train);

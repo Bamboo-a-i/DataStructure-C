@@ -1,4 +1,4 @@
-# Install script for directory: E:/Project/DataStructure/Course/LinerList
+# Install script for directory: E:/Project/DataStructure/Course/String
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

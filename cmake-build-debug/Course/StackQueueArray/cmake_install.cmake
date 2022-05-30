@@ -1,8 +1,8 @@
-# Install script for directory: E:/DataStructure/Course/StackQueueArray
+# Install script for directory: E:/Project/DataStructure/Course/StackQueueArray
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/DataStructure")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

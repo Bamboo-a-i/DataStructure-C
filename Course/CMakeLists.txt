@@ -1,2 +1,3 @@
 add_subdirectory(LinerList)
 add_subdirectory(StackQueueArray)
+add_subdirectory(String)

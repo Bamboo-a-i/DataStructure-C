@@ -10,7 +10,7 @@
 					[
 						1,
 						2,
-						5
+						6
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -32,7 +32,7 @@
 					"source" : "Status",
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -40,7 +40,8 @@
 					"childIndexes" : 
 					[
 						3,
-						4
+						4,
+						5
 					],
 					"jsonFile" : "directory-Course-Debug-1cf68e738167696f30d2.json",
 					"minimumCMakeVersion" : 
@@ -63,7 +64,7 @@
 					"source" : "Course/LinerList",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -79,6 +80,21 @@
 					"targetIndexes" : 
 					[
 						2
+					]
+				},
+				{
+					"build" : "Course/String",
+					"jsonFile" : "directory-Course.String-Debug-f4abcfb5f75fc20ff5b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "Course/String",
+					"targetIndexes" : 
+					[
+						3
 					]
 				},
 				{
@@ -104,38 +120,47 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"name" : "DataStructure",
 					"targetIndexes" : 
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 3,
-					"id" : "LinkList::@d63f42c60fbb31c43828",
-					"jsonFile" : "target-LinkList-Debug-f5a2d2f7137842d20047.json",
-					"name" : "LinkList",
+					"directoryIndex" : 1,
+					"id" : "Global_lib::@fe314c4577536ad9eb12",
+					"jsonFile" : "target-Global_lib-Debug-8ab9ecd846f4a17d2fe3.json",
+					"name" : "Global_lib",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 1,
-					"id" : "Scanf_lib::@fe314c4577536ad9eb12",
-					"jsonFile" : "target-Scanf_lib-Debug-d8d8cdf3573e10e73a94.json",
-					"name" : "Scanf_lib",
+					"directoryIndex" : 3,
+					"id" : "LinkList::@d63f42c60fbb31c43828",
+					"jsonFile" : "target-LinkList-Debug-3dbf7628c85a54724e08.json",
+					"name" : "LinkList",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "StackQueueArray::@46988698c8098a46d5dc",
-					"jsonFile" : "target-StackQueueArray-Debug-e822c3373c57c0a6b942.json",
+					"jsonFile" : "target-StackQueueArray-Debug-f89c918ced55772ae84b.json",
 					"name" : "StackQueueArray",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "String::@10c5aa9f6078be14522a",
+					"jsonFile" : "target-String-Debug-3faa37f37c6aa82509e2.json",
+					"name" : "String",
 					"projectIndex" : 0
 				}
 			]
@@ -144,8 +169,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/DataStructure/cmake-build-debug",
-		"source" : "E:/DataStructure"
+		"build" : "E:/Project/DataStructure/cmake-build-debug",
+		"source" : "E:/Project/DataStructure"
 	},
 	"version" : 
 	{

@@ -154,7 +154,7 @@ bool Destroy(SString *S)
 // 拼接
 bool ConCat(SString *T, char *S1, char *S2)
 {
-    (*T).ch = S1;
+    (*T).ch = S1,S2;
     while (*S1 !='\0') //
         S1++;
     while (*S2 !='\0')

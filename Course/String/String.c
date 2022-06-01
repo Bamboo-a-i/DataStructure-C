@@ -9,59 +9,59 @@ int main()
     setbuf(stdout,0);
     SString S;
     S.ch[0] = '\0';
-    // ³õÊ¼»¯¹ı³Ì
-    // S.ch = (char *) malloc(Maxsize*sizeof (char)); ¶¯Ì¬Êı×é³õÊ¼»¯
+    // åˆå§‹åŒ–è¿‡ç¨‹
+    // S.ch = (char *) malloc(Maxsize*sizeof (char)); åŠ¨æ€æ•°ç»„åˆå§‹åŒ–
     S.length = 0;
     char *chars = "ababcca";
     PressEnterToContinue(false);
-    printf("@@1--¸³Öµ\n");
+    printf("@@1--èµ‹å€¼\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         StrAssign(&S,chars);
         printf("e:%s",S.ch);
     }
     PressEnterToContinue(false);
-    printf("@@2--¸´ÖÆ\n");
+    printf("@@2--å¤åˆ¶\n");
     {
         chars = "111122";
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         StrCopy(&S,chars);
         printf("e:%s",S.ch);
     }
     PressEnterToContinue(false);
-    printf("@@3--ÅĞ¿Õ\n");
+    printf("@@3--åˆ¤ç©º\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         printf("e:%d\n",StrEmpty(S));
     }
     PressEnterToContinue(false);
-    printf("@@4--Çó³¤\n");
+    printf("@@4--æ±‚é•¿\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         printf("e:%d\n",StrLength(S));
     }
     PressEnterToContinue(false);
-    printf("@@5--Çå¿Õ\n");
+    printf("@@5--æ¸…ç©º\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         printf("e:%d",ClearString(&S));
     }
     PressEnterToContinue(false);
-    printf("@@6--Ïú»Ù\n");
+    printf("@@6--é”€æ¯\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         //printf("e:%d",Destroy(&S));
     }
     PressEnterToContinue(false);
-    printf("@@7--´®½Ó\n");
+    printf("@@7--ä¸²æ¥\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
        // printf("e:%s\n",ConCat(&S,"111","222"));
     }
     PressEnterToContinue(false);
-    printf("@@8--Çó×Ó´®\n");
+    printf("@@8--æ±‚å­ä¸²\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         SString sub;
         SString S1;
         sub.length = 0;
@@ -71,9 +71,9 @@ int main()
         printf("e:%s\n",sub.ch);
     }
     PressEnterToContinue(false);
-    printf("@@9--Çó×Ó´®\n");
+    printf("@@9--æ±‚å­ä¸²\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         SString S1,S2;
         S1.length=S2.length = 0;
         S1.ch[0] = S2.ch[0] = '\0';
@@ -82,9 +82,9 @@ int main()
         printf("e:%d\n", StrCompare(S1,S2));
     }
     PressEnterToContinue(false);
-    printf("@@10--Æ¥Åä×Ö·û\n");
+    printf("@@10--åŒ¹é…å­—ç¬¦\n");
     {
-        printf("¿ªÊ¼\n");
+        printf("å¼€å§‹\n");
         SString S1,S2;
         S1.length=S2.length = 0;
         S1.ch[0] = S2.ch[0] = '\0';
@@ -94,10 +94,10 @@ int main()
     }
 }
 
-// ¸³Öµ
+// èµ‹å€¼
 bool StrAssign(SString *T,const char *chars)
 {
-    if((*T).length == Maxsize-1) //Âú
+    if((*T).length == Maxsize-1) //æ»¡
         return false;
     int i = 0;
     while (chars[i] != '\0')
@@ -106,7 +106,7 @@ bool StrAssign(SString *T,const char *chars)
         if((*T).length == Maxsize-1)
         {
             return false;
-            // ³¬¹ıÁËÔÙ´Î·ÖÅä -- ĞèÒª¿¼ÂÇÅĞÂúµÄÌõ¼ş--¶¯Ì¬ÊµÏÖµÄÇé¿öÏÂ
+            // è¶…è¿‡äº†å†æ¬¡åˆ†é… -- éœ€è¦è€ƒè™‘åˆ¤æ»¡çš„æ¡ä»¶--åŠ¨æ€å®ç°çš„æƒ…å†µä¸‹
             // (*T).ch = (char *)malloc(sizeof ((*T).ch)+Maxsize*sizeof (char));
         }
         (*T).length+=1;
@@ -146,12 +146,12 @@ int ClearString(SString *S)
 bool Destroy(SString *S)
 {
     (*S).length = 0;
-    free(S); // ÊÍ·ÅÄÚ´æ
+    free(S); // é‡Šæ”¾å†…å­˜
     return true;
 }
 
 /*
-// Æ´½Ó
+// æ‹¼æ¥
 bool ConCat(SString *T, char *S1, char *S2)
 {
     (*T).ch = S1;
@@ -159,7 +159,7 @@ bool ConCat(SString *T, char *S1, char *S2)
         S1++;
     while (*S2 !='\0')
     {
-        *S1++ = *S2++;
+        *(S1++) = *S2++;
     }
     return true;
 }
@@ -167,7 +167,7 @@ bool ConCat(SString *T, char *S1, char *S2)
 
 bool SubString(SString *Sub,SString S,int pos,int len)
 {
-    if(pos+len-1 >S.length) //³¬¹ı³¤¶È
+    if(pos+len-1 >S.length) //è¶…è¿‡é•¿åº¦
         return false;
     for (int i = pos; i <pos+len ; i++)
     {
@@ -180,13 +180,13 @@ bool SubString(SString *Sub,SString S,int pos,int len)
 
 int StrCompare(SString S,SString T)
 {
-    // ÏàµÈ·µ»Ø0;S>T·µ»ØÖµ>0,·ñÔòĞ¡ÓÚ0;
+    // ç›¸ç­‰è¿”å›0;S>Tè¿”å›å€¼>0,å¦åˆ™å°äº0;
     for (int i = 1; i < S.length && i< T.length; i++)
     {
         if(S.ch[i] != T.ch[i])
-            return S.ch[i]-T.ch[i]; // ·µ»Ø²îÖµ
+            return S.ch[i]-T.ch[i]; // è¿”å›å·®å€¼
     }
-    // ±È½ÏÍêºó,length³¤µÄ¸ü´ó
+    // æ¯”è¾ƒå®Œå,lengthé•¿çš„æ›´å¤§
     return S.length-T.length;
 }
 
@@ -196,16 +196,16 @@ int Index(SString S,SString T)
     while (i<=S.length && j<=T.length)
     {
         if(S.ch[i] == T.ch[j])
-            i++,j++; // Æ¥Åä³É¹¦Í¬²½Ç°½ø
+            i++,j++; // åŒ¹é…æˆåŠŸåŒæ­¥å‰è¿›
         else
         {
-            // Æ¥ÅäÊ§°Üi»Øµ½Æğµã,j»Øµ½×î³õ±È½ÏµÄµã.
+            // åŒ¹é…å¤±è´¥iå›åˆ°èµ·ç‚¹,jå›åˆ°æœ€åˆæ¯”è¾ƒçš„ç‚¹.
             i = i-j+2;
             j = 1;
         }
     }
     if(j>T.length)
-        return i-T.length; //·µ»ØÆ¥Åä³É¹¦µÄÎ»ÖÃ
+        return i-T.length; //è¿”å›åŒ¹é…æˆåŠŸçš„ä½ç½®
     else
         return 0;
 }

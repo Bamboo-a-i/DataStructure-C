@@ -226,8 +226,8 @@ build Course/LinerList/rebuild_cache: phony Course/LinerList/CMakeFiles/rebuild_
 
 build cmake_object_order_depends_target_StackQueueArray: phony || cmake_object_order_depends_target_Global_lib
 
-build Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/Exercises.c.obj: C_COMPILER__StackQueueArray_Debug E$:/Project/DataStructure/Course/StackQueueArray/Exercises.c || cmake_object_order_depends_target_StackQueueArray
-  DEP_FILE = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir\Exercises.c.obj.d
+build Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/LinkQueue.c.obj: C_COMPILER__StackQueueArray_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkQueue.c || cmake_object_order_depends_target_StackQueueArray
+  DEP_FILE = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir\LinkQueue.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
   OBJECT_DIR = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir
@@ -241,7 +241,7 @@ build Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/Exercises.c.obj: C_C
 #############################################
 # Link the executable Course\StackQueueArray\StackQueueArray.exe
 
-build Course/StackQueueArray/StackQueueArray.exe: C_EXECUTABLE_LINKER__StackQueueArray_Debug Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/Exercises.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+build Course/StackQueueArray/StackQueueArray.exe: C_EXECUTABLE_LINKER__StackQueueArray_Debug Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/LinkQueue.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
   FLAGS = -g
   LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir
@@ -288,8 +288,8 @@ build Course/StackQueueArray/rebuild_cache: phony Course/StackQueueArray/CMakeFi
 
 build cmake_object_order_depends_target_String: phony || cmake_object_order_depends_target_Global_lib
 
-build Course/String/CMakeFiles/String.dir/String.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/String.c || cmake_object_order_depends_target_String
-  DEP_FILE = Course\String\CMakeFiles\String.dir\String.c.obj.d
+build Course/String/CMakeFiles/String.dir/KMP.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/KMP.c || cmake_object_order_depends_target_String
+  DEP_FILE = Course\String\CMakeFiles\String.dir\KMP.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
   OBJECT_DIR = Course\String\CMakeFiles\String.dir
@@ -303,7 +303,7 @@ build Course/String/CMakeFiles/String.dir/String.c.obj: C_COMPILER__String_Debug
 #############################################
 # Link the executable Course\String\String.exe
 
-build Course/String/String.exe: C_EXECUTABLE_LINKER__String_Debug Course/String/CMakeFiles/String.dir/String.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+build Course/String/String.exe: C_EXECUTABLE_LINKER__String_Debug Course/String/CMakeFiles/String.dir/KMP.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
   FLAGS = -g
   LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Course\String\CMakeFiles\String.dir
@@ -338,6 +338,96 @@ build Course/String/rebuild_cache: phony Course/String/CMakeFiles/rebuild_cache.
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target BitTree
+
+
+#############################################
+# Order-only phony target for BitTree
+
+build cmake_object_order_depends_target_BitTree: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/BiTree/CMakeFiles/BitTree.dir/main.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/main.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+
+build Course/BiTree/CMakeFiles/BitTree.dir/BitTree.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/BitTree.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\BitTree.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+
+build Course/BiTree/CMakeFiles/BitTree.dir/LQueue.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/LQueue.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\LQueue.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+
+build Course/BiTree/CMakeFiles/BitTree.dir/Stack.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/Stack.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\Stack.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+
+build Course/BiTree/CMakeFiles/BitTree.dir/ChildSiblingTree.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/ChildSiblingTree.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\ChildSiblingTree.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target BitTree
+
+
+#############################################
+# Link the executable Course\BiTree\BitTree.exe
+
+build Course/BiTree/BitTree.exe: C_EXECUTABLE_LINKER__BitTree_Debug Course/BiTree/CMakeFiles/BitTree.dir/main.c.obj Course/BiTree/CMakeFiles/BitTree.dir/BitTree.c.obj Course/BiTree/CMakeFiles/BitTree.dir/LQueue.c.obj Course/BiTree/CMakeFiles/BitTree.dir/Stack.c.obj Course/BiTree/CMakeFiles/BitTree.dir/ChildSiblingTree.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\BiTree\BitTree.exe
+  TARGET_IMPLIB = Course\BiTree\libBitTree.dll.a
+  TARGET_PDB = BitTree.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/BiTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\BiTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/BiTree/edit_cache: phony Course/BiTree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/BiTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\BiTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/BiTree/rebuild_cache: phony Course/BiTree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
 # E:/Project/DataStructure/CMakeLists.txt
 # =============================================================================
 
@@ -366,6 +456,10 @@ build Exercise/rebuild_cache: phony Exercise/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
+
+build BitTree: phony Course/BiTree/BitTree.exe
+
+build BitTree.exe: phony Course/BiTree/BitTree.exe
 
 build Global_lib: phony Status/libGlobal_lib.a
 
@@ -398,7 +492,14 @@ build all: phony Status/all Course/all Exercise/all
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course
 
-build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all
+build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all Course/BiTree/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/BiTree
+
+build Course/BiTree/all: phony Course/BiTree/BitTree.exe
 
 # =============================================================================
 
@@ -442,14 +543,14 @@ build Status/all: phony Status/libGlobal_lib.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/BiTree/CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../Course/BiTree/CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

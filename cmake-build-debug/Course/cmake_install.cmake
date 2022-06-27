@@ -52,3 +52,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/Project/DataStructure/cmake-build-debug/Course/String/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Project/DataStructure/cmake-build-debug/Course/BiTree/cmake_install.cmake")
+endif()
+

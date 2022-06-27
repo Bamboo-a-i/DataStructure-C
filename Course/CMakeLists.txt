@@ -1,3 +1,4 @@
 add_subdirectory(LinerList)
 add_subdirectory(StackQueueArray)
 add_subdirectory(String)
+add_subdirectory(BiTree)

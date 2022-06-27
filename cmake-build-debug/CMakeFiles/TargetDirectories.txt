@@ -14,5 +14,8 @@ E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/CMakeFiles/reb
 E:/Project/DataStructure/cmake-build-debug/Course/String/CMakeFiles/String.dir
 E:/Project/DataStructure/cmake-build-debug/Course/String/CMakeFiles/edit_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Course/String/CMakeFiles/rebuild_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/BiTree/CMakeFiles/BitTree.dir
+E:/Project/DataStructure/cmake-build-debug/Course/BiTree/CMakeFiles/edit_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/BiTree/CMakeFiles/rebuild_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Exercise/CMakeFiles/edit_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Exercise/CMakeFiles/rebuild_cache.dir

@@ -20,4 +20,9 @@ typedef  int ElemType;
  * 在发布时，可以让debug=FALSE，此时各个测试块将不会暂停。
  */
 void PressEnterToContinue(bool debug);
+/*
+ * 获取第一个字符的处理函数
+ *
+ * */
+char GetFirst(void);
 #endif //DATASTRUCTURE_STATUS_H

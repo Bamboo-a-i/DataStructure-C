@@ -9,131 +9,131 @@ int main()
     setbuf(stdout,0);
     LinkList L,L2;
     int result = 0;
-    /*ÎŞÍ·½áµã²Ù×÷*/
+    /*æ— å¤´ç»“ç‚¹æ“ä½œ*/
     PressEnterToContinue(false);
-    printf("²»´øÓĞÍ·½áµã\n");
-    printf("@@1--²âÊÔ³õÊ¼»¯º¯Êı@@\n");
+    printf("ä¸å¸¦æœ‰å¤´ç»“ç‚¹\n");
+    printf("@@1--æµ‹è¯•åˆå§‹åŒ–å‡½æ•°@@\n");
     {
-        printf("³õÊ¼»¯Ò»¸ö²»´øÓĞÍ·½áµãµ¥Á´±íL...\n");
+        printf("åˆå§‹åŒ–ä¸€ä¸ªä¸å¸¦æœ‰å¤´ç»“ç‚¹å•é“¾è¡¨L...\n");
         NHeadInitList(&L);
         NHeadInitList(&L2);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@2--²âÊÔÅĞ¿Õº¯Êı@@\n");
+    printf("@@2--æµ‹è¯•åˆ¤ç©ºå‡½æ•°@@\n");
     {
-        printf("²âÊÔ¶ÔÏóÎªL\n");
-        printf("Êä³ö1Îª¿Õ...\n");
+        printf("æµ‹è¯•å¯¹è±¡ä¸ºL\n");
+        printf("è¾“å‡º1ä¸ºç©º...\n");
         bool isEmpty = NHeadEmpty(&L);
         printf("%d\n",isEmpty);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@3--²âÊÔÍ·²å·¨º¯Êı@@\n");
+    printf("@@3--æµ‹è¯•å¤´æ’æ³•å‡½æ•°@@\n");
     {
-        printf("ÊäÈëÒ»´®Êı¾İ!(9999±íÊ¾ÍË³ö),Í·²å·¨ÊÇ¶ÔL½øĞĞ½¨Á¢\n");
+        printf("è¾“å…¥ä¸€ä¸²æ•°æ®!(9999è¡¨ç¤ºé€€å‡º),å¤´æ’æ³•æ˜¯å¯¹Lè¿›è¡Œå»ºç«‹\n");
         NHeadLinkHeadInsert(&L);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@4--²âÊÔÎ²²å·¨º¯Êı@@\n");
+    printf("@@4--æµ‹è¯•å°¾æ’æ³•å‡½æ•°@@\n");
     {
-        printf("ÊäÈëÒ»´®Êı¾İ!(9999±íÊ¾ÍË³ö),Î²²å·¨ÊÇ¶ÔL2½øĞĞ½¨Á¢\n");
+        printf("è¾“å…¥ä¸€ä¸²æ•°æ®!(9999è¡¨ç¤ºé€€å‡º),å°¾æ’æ³•æ˜¯å¯¹L2è¿›è¡Œå»ºç«‹\n");
         NHeadLinkTailInsert (&L2);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@5--²âÊÔÖ¸¶¨½áµãºó²åÈëº¯Êı@@\n");
+    printf("@@5--æµ‹è¯•æŒ‡å®šç»“ç‚¹åæ’å…¥å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L,Ä¬ÈÏµÚ1¸ö½áµãºó,³ÊÏÖ½á¹û»á²åÈëµ½3µÄÎ»ÖÃ)\n");
-        printf("´«ÈëL->nextµÄ½á¹û:\n");
+        printf("(å¯¹è±¡ä¸º:L,é»˜è®¤ç¬¬1ä¸ªç»“ç‚¹å,å‘ˆç°ç»“æœä¼šæ’å…¥åˆ°3çš„ä½ç½®)\n");
+        printf("ä¼ å…¥L->nextçš„ç»“æœ:\n");
         NHeadInsertNextNode(L->next,110);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L);
         printf("\n");
-        printf("´«ÈëLµÄ½á¹û:\n");
+        printf("ä¼ å…¥Lçš„ç»“æœ:\n");
         NHeadInsertNextNode(L,111);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@6--²âÊÔÖ¸¶¨½áµãÇ°²åÈëº¯Êı@@\n");
+    printf("@@6--æµ‹è¯•æŒ‡å®šç»“ç‚¹å‰æ’å…¥å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L2,Ä¬ÈÏµÚ1¸ö½áµãÇ°)\n");
-        printf("´«ÈëL2->nextµÄ½á¹û:\n");
+        printf("(å¯¹è±¡ä¸º:L2,é»˜è®¤ç¬¬1ä¸ªç»“ç‚¹å‰)\n");
+        printf("ä¼ å…¥L2->nextçš„ç»“æœ:\n");
         NHeadInsertNextNode(L2->next,112);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
-        printf("´«ÈëL2µÄ½á¹û:\n");
+        printf("ä¼ å…¥L2çš„ç»“æœ:\n");
         NHeadInsertNextNode(L2,113);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@7--²âÊÔ²åÈëÊı¾İº¯Êı@@\n");
+    printf("@@7--æµ‹è¯•æ’å…¥æ•°æ®å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L2,Ä¬ÈÏÔÚµÚ1¸ö½áµã´¦²åÈë)\n");
+        printf("(å¯¹è±¡ä¸º:L2,é»˜è®¤åœ¨ç¬¬1ä¸ªç»“ç‚¹å¤„æ’å…¥)\n");
         NHeadListInsert(&L2,1,114);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@8--²âÊÔÉ¾³ıº¯Êı(¶ÔÏóÎª:L,Ä¬ÈÏÉ¾³ıµÚ1¸ö)@@\n");
+    printf("@@8--æµ‹è¯•åˆ é™¤å‡½æ•°(å¯¹è±¡ä¸º:L,é»˜è®¤åˆ é™¤ç¬¬1ä¸ª)@@\n");
     {
-        printf("É¾³ı½áµã\n");
+        printf("åˆ é™¤ç»“ç‚¹\n");
         NHeadListDelete(&L,2,&result);
-        printf("É¾³ıµÄÖµ:%d",result);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("åˆ é™¤çš„å€¼:%d",result);
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@9--²âÊÔÖ¸¶¨½áµãÉ¾³ıº¯Êı@@\n");
+    printf("@@9--æµ‹è¯•æŒ‡å®šç»“ç‚¹åˆ é™¤å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L2,Ä¬ÈÏÉ¾³ıµÚ1¸ö½áµã)\n");
-        printf("´«ÈëL2->nextµÄ½á¹û:\n");
+        printf("(å¯¹è±¡ä¸º:L2,é»˜è®¤åˆ é™¤ç¬¬1ä¸ªç»“ç‚¹)\n");
+        printf("ä¼ å…¥L2->nextçš„ç»“æœ:\n");
         DeleteNode(L2->next);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
-        printf("´«ÈëL2µÄ½á¹û:\n");
+        printf("ä¼ å…¥L2çš„ç»“æœ:\n");
         DeleteNode(L2);
-        printf("´òÓ¡Êı¾İ\n");
+        printf("æ‰“å°æ•°æ®\n");
         NHeadPrintList(L2);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@10--²âÊÔÇó³¤¶Èº¯Êı@@\n");
+    printf("@@10--æµ‹è¯•æ±‚é•¿åº¦å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L)\n");
-        printf("´òÓ¡Êı¾İ\n");
-        printf("³¤¶ÈÊÇ:%d\n",NHeadLength(L));
+        printf("(å¯¹è±¡ä¸º:L)\n");
+        printf("æ‰“å°æ•°æ®\n");
+        printf("é•¿åº¦æ˜¯:%d\n",NHeadLength(L));
         NHeadPrintList(L);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@11--²âÊÔ°´Î»²éÕÒº¯Êıº¯Êı@@\n");
+    printf("@@11--æµ‹è¯•æŒ‰ä½æŸ¥æ‰¾å‡½æ•°å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L£¬Ä¬ÈÏµÚËÄ¸ö½áµã)\n"); //Êµ¼ÊÊä³ö»áÊÇµÚ5¸ö½áµãµÄÊı¾İ
-        printf("´òÓ¡Êı¾İ\n");
+        printf("(å¯¹è±¡ä¸º:Lï¼Œé»˜è®¤ç¬¬å››ä¸ªç»“ç‚¹)\n"); //å®é™…è¾“å‡ºä¼šæ˜¯ç¬¬5ä¸ªç»“ç‚¹çš„æ•°æ®
+        printf("æ‰“å°æ•°æ®\n");
         LNode *temp = NHeadGetElem(L,3);
         printf("getaddress:%p,getdata:%d\n",temp->next,temp->data);
         NHeadPrintList(L);
         printf("\n");
     }
     PressEnterToContinue(false);
-    printf("@@12--²âÊÔ°´Öµ²éÕÒº¯Êıº¯Êı@@\n");
+    printf("@@12--æµ‹è¯•æŒ‰å€¼æŸ¥æ‰¾å‡½æ•°å‡½æ•°@@\n");
     {
-        printf("(¶ÔÏóÎª:L2£¬Ä¬ÈÏÕÒµÈÓÚ9)\n");
-        printf("´òÓ¡Êı¾İ\n");
+        printf("(å¯¹è±¡ä¸º:L2ï¼Œé»˜è®¤æ‰¾ç­‰äº9)\n");
+        printf("æ‰“å°æ•°æ®\n");
         LNode *temp = NHeadLocateElem(L2,9);
         printf("getaddress:%p,getdata:%d\n",temp->next,temp->data);
         NHeadPrintList(L2);
@@ -141,10 +141,10 @@ int main()
     }
 }
 
-/*²»´øÓĞÍ·½áµãµÄËùÓĞ²Ù×÷*/
+/*ä¸å¸¦æœ‰å¤´ç»“ç‚¹çš„æ‰€æœ‰æ“ä½œ*/
 bool NHeadInitList(LinkList *L)
 {
-    (*L) = NULL; // Ã»ÓĞÍ·½áµãµÄÁ´±í
+    (*L) = NULL; // æ²¡æœ‰å¤´ç»“ç‚¹çš„é“¾è¡¨
     return true;
 }
 
@@ -180,14 +180,14 @@ bool NHeadListInsert(LinkList *L,int index,int e)
     }
     if(index == 1)
     {
-        // ´¦Àí²»´øÍ·½áµãµÄÔªËØÊ±²åÈëÎ»ÖÃÎª1Ê±ĞèÒªÌØ±ğ²Ù×÷¡£
-        LNode *node = (LNode *)malloc(sizeof(LNode)); // ĞÂµÄ½áµã
-        node->data = e; // ½áµã¸³Öµ
-        node->next = (*L); // ¸Ä±äĞÂ½ÚµãµÄÖ¸Ïò¡£
-        (*L) = node; // ¸Ä±äÍ·Ö¸ÕëµÄÖ¸Ïò
+        // å¤„ç†ä¸å¸¦å¤´ç»“ç‚¹çš„å…ƒç´ æ—¶æ’å…¥ä½ç½®ä¸º1æ—¶éœ€è¦ç‰¹åˆ«æ“ä½œã€‚
+        LNode *node = (LNode *)malloc(sizeof(LNode)); // æ–°çš„ç»“ç‚¹
+        node->data = e; // ç»“ç‚¹èµ‹å€¼
+        node->next = (*L); // æ”¹å˜æ–°èŠ‚ç‚¹çš„æŒ‡å‘ã€‚
+        (*L) = node; // æ”¹å˜å¤´æŒ‡é’ˆçš„æŒ‡å‘
         return true;
     }
-    // µ±²åÈëÎ»ÖÃ²»ÊÇµÚÒ»¸öÊ±²Ù×÷Ò»ÖÂ
+    // å½“æ’å…¥ä½ç½®ä¸æ˜¯ç¬¬ä¸€ä¸ªæ—¶æ“ä½œä¸€è‡´
     //LNode *p = L;
     //int j = 1;
     //while (p && j<index-1)
@@ -195,12 +195,12 @@ bool NHeadListInsert(LinkList *L,int index,int e)
     //    p = p->next;
     //    j++;
     //}
-    //if(p == NULL) // indexµÄÖµ²»ºÏ·¨
+    //if(p == NULL) // indexçš„å€¼ä¸åˆæ³•
     //{
     //    return false;
     //}
     LNode *findNode = NHeadGetElem((*L),index-1);
-    // ²åÈë½áµã
+    // æ’å…¥ç»“ç‚¹
 //    LNode *s = (LNode *)malloc(sizeof(LNode));
 //    s->next = p->next;
 //    s->data = e;
@@ -243,10 +243,10 @@ LinkList NHeadLinkHeadInsert(LinkList *L)
     printf("insert e:\n");
     scanf("%d",&e);
     while (e != 9999) {
-        LNode *node = malloc(sizeof(LNode)); // ´´½¨Ò»¸ö½áµã£¬×÷ÎªÊ×½áµã
-        node->next = (*L); // ÒòÎª×î¿ªÊ¼µÄÁ´±íµ±ÖĞÊÇnullÖµ£¬ËùÒÔ¿ÉÒÔ±£Ö¤×îºóÒ»¸öÔªËØÖ¸ÏòµÄÊ¼ÖÕÊÇnull
-        node->data = e; // ¸øµÚÒ»¸ö½áµã¸³Öµ -->Ã¿´ÎÊ×½áµã³Ğµ£µÄÊÇ½ÓÊÜ²åÈëµÄÊı¾İ
-        (*L) = node; // (*L) --> Í·Ö¸ÕëÖ¸ÏòĞÂµÄ½áµã
+        LNode *node = malloc(sizeof(LNode)); // åˆ›å»ºä¸€ä¸ªç»“ç‚¹ï¼Œä½œä¸ºé¦–ç»“ç‚¹
+        node->next = (*L); // å› ä¸ºæœ€å¼€å§‹çš„é“¾è¡¨å½“ä¸­æ˜¯nullå€¼ï¼Œæ‰€ä»¥å¯ä»¥ä¿è¯æœ€åä¸€ä¸ªå…ƒç´ æŒ‡å‘çš„å§‹ç»ˆæ˜¯null
+        node->data = e; // ç»™ç¬¬ä¸€ä¸ªç»“ç‚¹èµ‹å€¼ -->æ¯æ¬¡é¦–ç»“ç‚¹æ‰¿æ‹…çš„æ˜¯æ¥å—æ’å…¥çš„æ•°æ®
+        (*L) = node; // (*L) --> å¤´æŒ‡é’ˆæŒ‡å‘æ–°çš„ç»“ç‚¹
         printf("insert e:\n");
         scanf("%d",&e);
     }
@@ -256,20 +256,20 @@ LinkList NHeadLinkHeadInsert(LinkList *L)
 LinkList NHeadLinkTailInsert(LinkList *L)
 {
     int e;
-    LNode *tail = (*L); //Íâ²ãÖĞÈÃÎ²°ÍÖ¸ÏòÊ×½áµã
+    LNode *tail = (*L); //å¤–å±‚ä¸­è®©å°¾å·´æŒ‡å‘é¦–ç»“ç‚¹
     printf("insert e:\n");
     scanf("%d",&e);
     while (e != 9999) {
         LNode *node = (LNode *)malloc(sizeof(LNode));
         node->data = e;
-        if((*L) == NULL) // ÊäÈëÎªÊ×½Úµã
+        if((*L) == NULL) // è¾“å…¥ä¸ºé¦–èŠ‚ç‚¹
         {
             (*L) = node;
-            tail = (*L); // Ê×Î²½áµãÍ¬Ìå
+            tail = (*L); // é¦–å°¾ç»“ç‚¹åŒä½“
         }
         else
         {
-            tail->next = node; // Î²½áµã¿ªÊ¼ÒÆ¶¯
+            tail->next = node; // å°¾ç»“ç‚¹å¼€å§‹ç§»åŠ¨
             tail = node;
         }
         printf("insert e:\n");
@@ -292,22 +292,22 @@ bool NHeadListDelete(LinkList *L,int index,int *e)
         node = node->next;
         j++;
     }
-    if(node == NULL) // index µÄÖµ²»ºÏ·¨
+    if(node == NULL) // index çš„å€¼ä¸åˆæ³•
         return false;
-    if(node->next == NULL) // Ö»ÓĞÕâÒ»¸ö½áµã²»ÄÜ½øĞĞÉ¾³ı²Ù×÷
+    if(node->next == NULL) // åªæœ‰è¿™ä¸€ä¸ªç»“ç‚¹ä¸èƒ½è¿›è¡Œåˆ é™¤æ“ä½œ
     {
         return false;
     }
-    // ´¦Àíµ±ÒªÉ¾³ıµÄÊÇµÚÒ»¸ö½áµãÊ±
+    // å¤„ç†å½“è¦åˆ é™¤çš„æ˜¯ç¬¬ä¸€ä¸ªç»“ç‚¹æ—¶
     if(index == 1)
     {
         delNode = (*L);
-        (*L) = node->next; // ÈÃÍ·Ö¸ÕëÖ±½ÓÖ¸ÏòÏÂÒ»¸ö½áµãµØÖ·¼´¿É¡£
+        (*L) = node->next; // è®©å¤´æŒ‡é’ˆç›´æ¥æŒ‡å‘ä¸‹ä¸€ä¸ªç»“ç‚¹åœ°å€å³å¯ã€‚
         e = (int *) delNode->data;
         free(delNode);
         return true;
     }
-    // ·ÇµÚÒ»¸ö½áµã¡£
+    // éç¬¬ä¸€ä¸ªç»“ç‚¹ã€‚
     delNode = node->next;
     e = delNode->data;
     node->next = delNode->next;
@@ -317,7 +317,7 @@ bool NHeadListDelete(LinkList *L,int index,int *e)
 
 LNode *NHeadLocateElem(LinkList L,int e)
 {
-    LNode *temp = L; // ²»´øÍ·½áµãµÄ²»Í¬Ö®´¦
+    LNode *temp = L; // ä¸å¸¦å¤´ç»“ç‚¹çš„ä¸åŒä¹‹å¤„
     while (temp != NULL && temp->data !=e) {
         temp = temp->next;
     }
@@ -338,7 +338,7 @@ int NHeadLength(LinkList L)
 
 void NHeadPrintList(LinkList L)
 {
-    LNode *temp = L; // ³õÊ¼µÈÓÚÍ·½áµãµÄÏÂÒ»¸ö½áµã£¬Í·½áµãÊÇ²»´æ´¢Êı¾İµÄ
+    LNode *temp = L; // åˆå§‹ç­‰äºå¤´ç»“ç‚¹çš„ä¸‹ä¸€ä¸ªç»“ç‚¹ï¼Œå¤´ç»“ç‚¹æ˜¯ä¸å­˜å‚¨æ•°æ®çš„
     while(temp != NULL)
     {
         printf("nodeAddress:%p;nodee:%d\n",temp,temp->data);
@@ -353,8 +353,8 @@ bool DeleteNode(LNode *node)
         return false;
     }
     LNode *temp = node->next;
-    node->data = temp->data; // Óëºó¼Ì½áµã½»»»Êı¾İ
-    node->next = temp->next; // ¶Ï¿ª½áµãÁ¬½Ó.
-    free(temp); // ÊÍ·Å
+    node->data = temp->data; // ä¸åç»§ç»“ç‚¹äº¤æ¢æ•°æ®
+    node->next = temp->next; // æ–­å¼€ç»“ç‚¹è¿æ¥.
+    free(temp); // é‡Šæ”¾
     return true;
 }

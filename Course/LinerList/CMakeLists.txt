@@ -1,7 +1,7 @@
-# °üº¬¹«¹²¿â
+# åŒ…å«å…¬å…±åº“
 include_directories(${CMAKE_SOURCE_DIR}/Status)
 
-# Éú³É¿ÉÖ´ĞĞÎÄ¼ş
+# ç”Ÿæˆå¯æ‰§è¡Œæ–‡ä»¶
 add_executable(LinkList DLinkNode.h DLinkNode.c)
-# Á´½Ó¹«¹²¿â
+# é“¾æ¥å…¬å…±åº“
 target_link_libraries(LinkList Global_lib)

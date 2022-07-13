@@ -1,0 +1,2 @@
+add_subdirectory(MGraph)
+add_subdirectory(ALGraph)

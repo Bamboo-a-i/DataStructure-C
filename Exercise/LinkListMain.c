@@ -8,32 +8,32 @@ int main() {
     setbuf(stdout,0);
     LinkHeadInsert(&L);
     PressEnterToContinue(false);
-    printf("@@3--¿ÎºóÏ°ÌâµÚ3Ìâ--;\n");
+    printf("@@3--è¯¾åä¹ é¢˜ç¬¬3é¢˜--;\n");
     {
-        printf("¿ªÊ¼´ğÌâ!\n");
+        printf("å¼€å§‹ç­”é¢˜!\n");
         R_Print(L);
     }
     PressEnterToContinue(false);
-    printf("@@4--¿ÎºóÏ°ÌâµÚ4Ìâ--;\n");
+    printf("@@4--è¯¾åä¹ é¢˜ç¬¬4é¢˜--;\n");
     {
-        printf("¿ªÊ¼´ğÌâ!\n");
+        printf("å¼€å§‹ç­”é¢˜!\n");
         Delete_MinNode(&L);
     }
 
     PressEnterToContinue(false);
-    printf("@@5--¿ÎºóÏ°ÌâµÚ5Ìâ--;\n");
+    printf("@@5--è¯¾åä¹ é¢˜ç¬¬5é¢˜--;\n");
     {
-        printf("¿ªÊ¼´ğÌâ!\n");
-        Reverse_LinkList1(&L); // ·½·¨1
-        Reverse_LinkList2(&L); // ·½·¨2
+        printf("å¼€å§‹ç­”é¢˜!\n");
+        Reverse_LinkList1(&L); // æ–¹æ³•1
+        Reverse_LinkList2(&L); // æ–¹æ³•2
         PrintList(L);
     }
 
     PressEnterToContinue(false);
-    printf("@@6--¿ÎºóÏ°ÌâµÚ6Ìâ--;\n");
+    printf("@@6--è¯¾åä¹ é¢˜ç¬¬6é¢˜--;\n");
     {
-        printf("¿ªÊ¼´ğÌâ!\n");
-        Sort(&L); // ·½·¨1
+        printf("å¼€å§‹ç­”é¢˜!\n");
+        Sort(&L); // æ–¹æ³•1
         PrintList(L);
     }
 

@@ -1,0 +1,36 @@
+Performing C SOURCE FILE Test FLAG_SUPPORTED_Wcomma failed with the following output:
+Change Dir: E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Program Files/JetBrains/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_a6e24 && [1/2] Building C object CMakeFiles/cmTC_a6e24.dir/src.c.obj
+FAILED: CMakeFiles/cmTC_a6e24.dir/src.c.obj 
+"E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" -DFLAG_SUPPORTED_Wcomma  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong    -Wcomma -o CMakeFiles/cmTC_a6e24.dir/src.c.obj -c E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+gcc.exe: error: unrecognized command-line option '-Wcomma'; did you mean '-Wcomment'?
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test FLAG_SUPPORTED_Wmissingvariabledeclarations failed with the following output:
+Change Dir: E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Program Files/JetBrains/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_f7775 && [1/2] Building C object CMakeFiles/cmTC_f7775.dir/src.c.obj
+FAILED: CMakeFiles/cmTC_f7775.dir/src.c.obj 
+"E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" -DFLAG_SUPPORTED_Wmissingvariabledeclarations  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros    -Wmissing-variable-declarations -o CMakeFiles/cmTC_f7775.dir/src.c.obj -c E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+gcc.exe: error: unrecognized command-line option '-Wmissing-variable-declarations'; did you mean '-Wmissing-declarations'?
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test FLAG_SUPPORTED_Wusedbutmarkedunused failed with the following output:
+Change Dir: E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Program Files/JetBrains/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_66506 && [1/2] Building C object CMakeFiles/cmTC_66506.dir/src.c.obj
+FAILED: CMakeFiles/cmTC_66506.dir/src.c.obj 
+"E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" -DFLAG_SUPPORTED_Wusedbutmarkedunused  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros    -Wused-but-marked-unused -o CMakeFiles/cmTC_66506.dir/src.c.obj -c E:/Project/DataStructure/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+gcc.exe: error: unrecognized command-line option '-Wused-but-marked-unused'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }

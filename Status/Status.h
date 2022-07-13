@@ -8,20 +8,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* È«¾Ö±äÁ¿*/
-extern bool debug;   // ÊÇ·ñÊ¹ÓÃdebugÄ£Ê½
-
+/* å…¨å±€å˜é‡*/
 typedef  int ElemType;
-#define Maxsize 10
+typedef char ElemTypeChar;
+#define Maxsize 10 // çº¿æ€§è¡¨
+#define SIZE 13 // å¹¶æŸ¥é›†
+#define MAX_TREE_SIZE 100 // æ ‘
+#define ReadSize 5 // è¯»æ–‡ä»¶
+/* å…¨å±€å˜é‡*/
+extern bool debug;   // æ˜¯å¦ä½¿ç”¨debugæ¨¡å¼
 /*
- * ŞôÏÂ»Ø³µ¼üÒÔ¼ÌĞøÔËĞĞ¡£
+ * æ‘ä¸‹å›è½¦é”®ä»¥ç»§ç»­è¿è¡Œã€‚
  *
- * Í¨³£ÔÚ²âÊÔ½×¶ÎÊ±£¬ĞèÒªÈÃÃ¿Ò»²½²âÊÔ¶¼ÔİÍ£ÏÂÀ´£¬ÒÔ¹Û²ìÆäÊä³ö£¬´ËÊ±¿ÉÒÔÈÃdebug=TRUE¡£
- * ÔÚ·¢²¼Ê±£¬¿ÉÒÔÈÃdebug=FALSE£¬´ËÊ±¸÷¸ö²âÊÔ¿é½«²»»áÔİÍ£¡£
+ * é€šå¸¸åœ¨æµ‹è¯•é˜¶æ®µæ—¶ï¼Œéœ€è¦è®©æ¯ä¸€æ­¥æµ‹è¯•éƒ½æš‚åœä¸‹æ¥ï¼Œä»¥è§‚å¯Ÿå…¶è¾“å‡ºï¼Œæ­¤æ—¶å¯ä»¥è®©debug=TRUEã€‚
+ * åœ¨å‘å¸ƒæ—¶ï¼Œå¯ä»¥è®©debug=FALSEï¼Œæ­¤æ—¶å„ä¸ªæµ‹è¯•å—å°†ä¸ä¼šæš‚åœã€‚
  */
 void PressEnterToContinue(bool debug);
 /*
- * »ñÈ¡µÚÒ»¸ö×Ö·ûµÄ´¦Àíº¯Êı
+ * è·å–ç¬¬ä¸€ä¸ªå­—ç¬¦çš„å¤„ç†å‡½æ•°
  *
  * */
 char GetFirst(void);

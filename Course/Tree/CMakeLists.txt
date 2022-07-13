@@ -1,0 +1,5 @@
+add_subdirectory(BitTree)
+add_subdirectory(Set)
+add_subdirectory(ChildSiblingTree)
+add_subdirectory(ThreadTree)
+add_subdirectory(ParentTree)

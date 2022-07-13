@@ -10,24 +10,24 @@ int main()
     setbuf(stdout,0);
     LLinkList L;
     PressEnterToContinue(false);
-    printf("@@1--²âÊÔ³õÊ¼»¯Ñ­»·µ¥Á´±íº¯Êý--;\n");
+    printf("@@1--æµ‹è¯•åˆå§‹åŒ–å¾ªçŽ¯å•é“¾è¡¨å‡½æ•°--;\n");
     {
-        printf("¿ªÊ¼³õÊ¼»¯!\n");
+        printf("å¼€å§‹åˆå§‹åŒ–!\n");
         LLinkListInit(&L);
     }
     PressEnterToContinue(false);
-    printf("@@2--²âÊÔÅÐ¿Õº¯Êý--;\n");
+    printf("@@2--æµ‹è¯•åˆ¤ç©ºå‡½æ•°--;\n");
     {
-        printf("Êä³ö1Îª¿Õ\n");
-        printf("½á¹ûÊÇ:%d\n", Empty(L));
+        printf("è¾“å‡º1ä¸ºç©º\n");
+        printf("ç»“æžœæ˜¯:%d\n", Empty(L));
     }
     PressEnterToContinue(false);
-    printf("@@3--²âÊÔÖ¸¶¨½áµãºó²åÈëº¯Êý--;\n");
+    printf("@@3--æµ‹è¯•æŒ‡å®šç»“ç‚¹åŽæ’å…¥å‡½æ•°--;\n");
     {
         LLNode temp;
         temp.data = 15;
         InsertNextNode(L,&temp);
-        printf("´òÓ¡Êý¾Ý!\n");
+        printf("æ‰“å°æ•°æ®!\n");
         PrintLLinkList(L);
     }
 }
@@ -42,7 +42,7 @@ bool LLinkListInit(LLinkList *L)
 
 bool Empty(LLinkList L)
 {
-    if(L->next == L) // ÏÂÒ»¸ö½áµãµÈÓÚÍ·½áµã
+    if(L->next == L) // ä¸‹ä¸€ä¸ªç»“ç‚¹ç­‰äºŽå¤´ç»“ç‚¹
         return true;
     else
         return false;

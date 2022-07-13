@@ -10,37 +10,37 @@ int main()
     LDLinkList L;
     setbuf(stdout,0);
     PressEnterToContinue(false);
-    printf("@@1--²âÊÔ³õÊ¼»¯Ñ­»·µ¥Á´±íº¯Êý--;\n");
+    printf("@@1--æµ‹è¯•åˆå§‹åŒ–å¾ªçŽ¯å•é“¾è¡¨å‡½æ•°--;\n");
     {
-        printf("¿ªÊ¼³õÊ¼»¯!\n");
+        printf("å¼€å§‹åˆå§‹åŒ–!\n");
         LDLinkListInit(&L);
     }
     PressEnterToContinue(false);
-    printf("@@2--²âÊÔÅÐ¿Õº¯Êý--;\n");
+    printf("@@2--æµ‹è¯•åˆ¤ç©ºå‡½æ•°--;\n");
     {
-        printf("Êä³ö1Îª¿Õ\n");
-        printf("½á¹ûÊÇ:%d\n", Empty(L));
+        printf("è¾“å‡º1ä¸ºç©º\n");
+        printf("ç»“æžœæ˜¯:%d\n", Empty(L));
     }
     PressEnterToContinue(false);
-    printf("@@3--²âÊÔÊÇ·ñÊÇ±íÎ²½áµãº¯Êý--;\n");
+    printf("@@3--æµ‹è¯•æ˜¯å¦æ˜¯è¡¨å°¾ç»“ç‚¹å‡½æ•°--;\n");
     {
-        printf("Êä³ö1±íÊ¾ÊÇ±íÎ²\n");
-        printf("½á¹ûÊÇ:%d\n", IsTail(L,L->next));
+        printf("è¾“å‡º1è¡¨ç¤ºæ˜¯è¡¨å°¾\n");
+        printf("ç»“æžœæ˜¯:%d\n", IsTail(L,L->next));
     }
     PressEnterToContinue(false);
-    printf("@@4--²âÊÔÖ¸¶¨½áµãºó²åÈëº¯Êý--;\n");
+    printf("@@4--æµ‹è¯•æŒ‡å®šç»“ç‚¹åŽæ’å…¥å‡½æ•°--;\n");
     {
         LDLNode temp;
         temp.data = 15;
         InsertNextNode(L,&temp);
-        printf("´òÓ¡Êý¾Ý!\n");
+        printf("æ‰“å°æ•°æ®!\n");
         PrintLDLinkList(L);
     }
     PressEnterToContinue(false);
-    printf("@@5--²âÊÔÉ¾³ý½áµãº¯Êý--;\n");
+    printf("@@5--æµ‹è¯•åˆ é™¤ç»“ç‚¹å‡½æ•°--;\n");
     {
         Delete(L->next->next);
-        printf("´òÓ¡Êý¾Ý!\n");
+        printf("æ‰“å°æ•°æ®!\n");
         PrintLDLinkList(L);
     }
 }
@@ -65,7 +65,7 @@ bool Empty(LDLinkList L)
 
 bool IsTail(LDLinkList L,LDLNode *ldlNode)
 {
-    if(ldlNode->next == L) //ldlNode->prior == tail; ¿ÉÒÔÓÃÀ´ÅÐ¶ÏÒ»¸ö½áµãÊÇ²»ÊÇÊ×½áµã.
+    if(ldlNode->next == L) //ldlNode->prior == tail; å¯ä»¥ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªç»“ç‚¹æ˜¯ä¸æ˜¯é¦–ç»“ç‚¹.
         return true;
     else
         return false;
@@ -96,7 +96,7 @@ bool Delete(LDLNode* ldlNode)
 void PrintLDLinkList(LDLinkList L)
 {
     LDLNode *temp = L->next;
-    while (temp != L) // .next == LÊ±,±íÊ¾µ½´ïÁËÎ²½áµã
+    while (temp != L) // .next == Læ—¶,è¡¨ç¤ºåˆ°è¾¾äº†å°¾ç»“ç‚¹
     {
         printf("address:0X%d;e:%d\n",temp,temp->data);
         temp = temp->next;

@@ -1,12 +1,12 @@
 //
 // Created by cxf18 on 2022/6/27.
-// ×÷ÎªÕûÌåÁ·Ï°ÖĞ¹²ÓÃµÄÍ·ÎÄ¼ş¶¨ÒåÎ»ÖÃ ±ÜÃâ²¿·ÖÎÄ¼şÄÚÈİÖØ¸´¶¨Òå¡£
+// ä½œä¸ºæ•´ä½“ç»ƒä¹ ä¸­å…±ç”¨çš„å¤´æ–‡ä»¶å®šä¹‰ä½ç½® é¿å…éƒ¨åˆ†æ–‡ä»¶å†…å®¹é‡å¤å®šä¹‰ã€‚
 #ifndef DATASTRUCTURE_EXERCISE_H
 #define DATASTRUCTURE_EXERCISE_H
 #include "Status.h"
 
 /*
- * StackQueueArray Êı¾İ½á¹¹¼°Æäº¯Êı¶¨Òå
+ * StackQueueArray æ•°æ®ç»“æ„åŠå…¶å‡½æ•°å®šä¹‰
  * */
 typedef struct
 {
@@ -34,30 +34,30 @@ bool Push(SqStack *S,ElemType e);
 
 bool Pop(SqStack *S,ElemType *e);
 
-// Æ¥ÅäÀ¨ºÅ
+// åŒ¹é…æ‹¬å·
 bool MatchKuoHao(char *str);
-// Push ×Ö·û
+// Push å­—ç¬¦
 bool PushC(SqStack1 *S1,char e);
-// Pop ×Ö·û
+// Pop å­—ç¬¦
 bool PopC(SqStack1 *S1,char *e);
-// ×Ö·ûÕ»ÅĞ¿Õ
+// å­—ç¬¦æ ˆåˆ¤ç©º
 bool CEmpty(SqStack1 S1);
 
 bool TrainArrange(char *train);
 
-/*½áÎ²*/
+/*ç»“å°¾*/
 
 
 /*
- * Á´±í²¿·ÖÊı¾İ½á¹¹¼°Æäº¯Êı¶¨Òå
+ * é“¾è¡¨éƒ¨åˆ†æ•°æ®ç»“æ„åŠå…¶å‡½æ•°å®šä¹‰
  * */
 typedef struct LNode
 {
     int data;
     struct LNode *next;
 }LNode,*LinkList;
-// LNode* Ç¿µ÷ÊÇÒ»¸ö½áµã;
-// LinkList Ç¿µ÷ÊÇÒ»¸öµ¥Á´±í;
+// LNode* å¼ºè°ƒæ˜¯ä¸€ä¸ªç»“ç‚¹;
+// LinkList å¼ºè°ƒæ˜¯ä¸€ä¸ªå•é“¾è¡¨;
 
 bool InitList(LinkList *L);
 
@@ -79,6 +79,6 @@ void Sort(LinkList *L);
 
 void PrintList(LinkList L);
 
-/*½áÎ²*/
+/*ç»“å°¾*/
 
 #endif //DATASTRUCTURE_EXERCISE_H

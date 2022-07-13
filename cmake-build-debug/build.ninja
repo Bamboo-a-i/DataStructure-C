@@ -69,7 +69,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Global_lib
+# Object build statements for SHARED_LIBRARY target Global_lib
 
 
 #############################################
@@ -78,6 +78,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_Global_lib: phony || Status/CMakeFiles/Global_lib.dir
 
 build Status/CMakeFiles/Global_lib.dir/Status.c.obj: C_COMPILER__Global_lib_Debug E$:/Project/DataStructure/Status/Status.c || cmake_object_order_depends_target_Global_lib
+  DEFINES = -DGlobal_lib_EXPORTS
   DEP_FILE = Status\CMakeFiles\Global_lib.dir\Status.c.obj.d
   FLAGS = -g -std=gnu11
   OBJECT_DIR = Status\CMakeFiles\Global_lib.dir
@@ -85,19 +86,22 @@ build Status/CMakeFiles/Global_lib.dir/Status.c.obj: C_COMPILER__Global_lib_Debu
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Global_lib
+# Link build statements for SHARED_LIBRARY target Global_lib
 
 
 #############################################
-# Link the static library Status\libGlobal_lib.a
+# Link the shared library Status\libGlobal_lib.dll
 
-build Status/libGlobal_lib.a: C_STATIC_LIBRARY_LINKER__Global_lib_Debug Status/CMakeFiles/Global_lib.dir/Status.c.obj
+build Status/libGlobal_lib.dll Status/libGlobal_lib.dll.a: C_SHARED_LIBRARY_LINKER__Global_lib_Debug Status/CMakeFiles/Global_lib.dir/Status.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Status\CMakeFiles\Global_lib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Status\libGlobal_lib.a
-  TARGET_PDB = Global_lib.a.dbg
+  RESTAT = 1
+  TARGET_FILE = Status\libGlobal_lib.dll
+  TARGET_IMPLIB = Status\libGlobal_lib.dll.a
+  TARGET_PDB = Global_lib.dll.dbg
 
 
 #############################################
@@ -179,9 +183,9 @@ build Course/LinerList/CMakeFiles/LinkList.dir/DLinkNode.c.obj: C_COMPILER__Link
 #############################################
 # Link the executable Course\LinerList\LinkList.exe
 
-build Course/LinerList/LinkList.exe: C_EXECUTABLE_LINKER__LinkList_Debug Course/LinerList/CMakeFiles/LinkList.dir/DLinkNode.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+build Course/LinerList/LinkList.exe: C_EXECUTABLE_LINKER__LinkList_Debug Course/LinerList/CMakeFiles/LinkList.dir/DLinkNode.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
   FLAGS = -g
-  LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = Course\LinerList\CMakeFiles\LinkList.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -217,40 +221,6 @@ build Course/LinerList/rebuild_cache: phony Course/LinerList/CMakeFiles/rebuild_
 # E:/Project/DataStructure/Course/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for EXECUTABLE target StackQueueArray
-
-
-#############################################
-# Order-only phony target for StackQueueArray
-
-build cmake_object_order_depends_target_StackQueueArray: phony || cmake_object_order_depends_target_Global_lib
-
-build Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/LinkQueue.c.obj: C_COMPILER__StackQueueArray_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkQueue.c || cmake_object_order_depends_target_StackQueueArray
-  DEP_FILE = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir\LinkQueue.c.obj.d
-  FLAGS = -g -std=gnu11
-  INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir
-  OBJECT_FILE_DIR = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target StackQueueArray
-
-
-#############################################
-# Link the executable Course\StackQueueArray\StackQueueArray.exe
-
-build Course/StackQueueArray/StackQueueArray.exe: C_EXECUTABLE_LINKER__StackQueueArray_Debug Course/StackQueueArray/CMakeFiles/StackQueueArray.dir/LinkQueue.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
-  FLAGS = -g
-  LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = Course\StackQueueArray\CMakeFiles\StackQueueArray.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Course\StackQueueArray\StackQueueArray.exe
-  TARGET_IMPLIB = Course\StackQueueArray\libStackQueueArray.dll.a
-  TARGET_PDB = StackQueueArray.exe.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -276,42 +246,353 @@ build Course/StackQueueArray/rebuild_cache: phony Course/StackQueueArray/CMakeFi
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# E:/Project/DataStructure/Course/CMakeLists.txt
+# E:/Project/DataStructure/Course/StackQueueArray/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target String
+# Object build statements for EXECUTABLE target Stack
 
 
 #############################################
-# Order-only phony target for String
+# Order-only phony target for Stack
 
-build cmake_object_order_depends_target_String: phony || cmake_object_order_depends_target_Global_lib
+build cmake_object_order_depends_target_Stack: phony || cmake_object_order_depends_target_Global_lib
 
-build Course/String/CMakeFiles/String.dir/KMP.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/KMP.c || cmake_object_order_depends_target_String
-  DEP_FILE = Course\String\CMakeFiles\String.dir\KMP.c.obj.d
+build Course/StackQueueArray/Stack/CMakeFiles/Stack.dir/Stack.c.obj: C_COMPILER__Stack_Debug E$:/Project/DataStructure/Course/StackQueueArray/Stack/Stack.c || cmake_object_order_depends_target_Stack
+  DEP_FILE = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir\Stack.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\String\CMakeFiles\String.dir
-  OBJECT_FILE_DIR = Course\String\CMakeFiles\String.dir
+  OBJECT_DIR = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir
+
+build Course/StackQueueArray/Stack/CMakeFiles/Stack.dir/main.c.obj: C_COMPILER__Stack_Debug E$:/Project/DataStructure/Course/StackQueueArray/Stack/main.c || cmake_object_order_depends_target_Stack
+  DEP_FILE = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target String
+# Link build statements for EXECUTABLE target Stack
 
 
 #############################################
-# Link the executable Course\String\String.exe
+# Link the executable Course\StackQueueArray\Stack\Stack.exe
 
-build Course/String/String.exe: C_EXECUTABLE_LINKER__String_Debug Course/String/CMakeFiles/String.dir/KMP.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+build Course/StackQueueArray/Stack/Stack.exe: C_EXECUTABLE_LINKER__Stack_Debug Course/StackQueueArray/Stack/CMakeFiles/Stack.dir/Stack.c.obj Course/StackQueueArray/Stack/CMakeFiles/Stack.dir/main.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
   FLAGS = -g
-  LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = Course\String\CMakeFiles\String.dir
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\StackQueueArray\Stack\CMakeFiles\Stack.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Course\String\String.exe
-  TARGET_IMPLIB = Course\String\libString.dll.a
-  TARGET_PDB = String.exe.dbg
+  TARGET_FILE = Course\StackQueueArray\Stack\Stack.exe
+  TARGET_IMPLIB = Course\StackQueueArray\Stack\libStack.dll.a
+  TARGET_PDB = Stack.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/StackQueueArray/Stack/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\Stack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/StackQueueArray/Stack/edit_cache: phony Course/StackQueueArray/Stack/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/StackQueueArray/Stack/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\Stack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/StackQueueArray/Stack/rebuild_cache: phony Course/StackQueueArray/Stack/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/StackQueueArray/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target LinkQueue
+
+
+#############################################
+# Order-only phony target for LinkQueue
+
+build cmake_object_order_depends_target_LinkQueue: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/StackQueueArray/LinkQueue/CMakeFiles/LinkQueue.dir/main.c.obj: C_COMPILER__LinkQueue_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkQueue/main.c || cmake_object_order_depends_target_LinkQueue
+  DEP_FILE = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir
+
+build Course/StackQueueArray/LinkQueue/CMakeFiles/LinkQueue.dir/LinkQueue.c.obj: C_COMPILER__LinkQueue_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkQueue/LinkQueue.c || cmake_object_order_depends_target_LinkQueue
+  DEP_FILE = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir\LinkQueue.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target LinkQueue
+
+
+#############################################
+# Link the executable Course\StackQueueArray\LinkQueue\LinkQueue.exe
+
+build Course/StackQueueArray/LinkQueue/LinkQueue.exe: C_EXECUTABLE_LINKER__LinkQueue_Debug Course/StackQueueArray/LinkQueue/CMakeFiles/LinkQueue.dir/main.c.obj Course/StackQueueArray/LinkQueue/CMakeFiles/LinkQueue.dir/LinkQueue.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\StackQueueArray\LinkQueue\CMakeFiles\LinkQueue.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\StackQueueArray\LinkQueue\LinkQueue.exe
+  TARGET_IMPLIB = Course\StackQueueArray\LinkQueue\libLinkQueue.dll.a
+  TARGET_PDB = LinkQueue.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/StackQueueArray/LinkQueue/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\LinkQueue && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/StackQueueArray/LinkQueue/edit_cache: phony Course/StackQueueArray/LinkQueue/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/StackQueueArray/LinkQueue/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\LinkQueue && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/StackQueueArray/LinkQueue/rebuild_cache: phony Course/StackQueueArray/LinkQueue/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/StackQueueArray/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target LinkStack
+
+
+#############################################
+# Order-only phony target for LinkStack
+
+build cmake_object_order_depends_target_LinkStack: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/StackQueueArray/LinkStack/CMakeFiles/LinkStack.dir/LinkStack.c.obj: C_COMPILER__LinkStack_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkStack/LinkStack.c || cmake_object_order_depends_target_LinkStack
+  DEP_FILE = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir\LinkStack.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir
+
+build Course/StackQueueArray/LinkStack/CMakeFiles/LinkStack.dir/main.c.obj: C_COMPILER__LinkStack_Debug E$:/Project/DataStructure/Course/StackQueueArray/LinkStack/main.c || cmake_object_order_depends_target_LinkStack
+  DEP_FILE = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target LinkStack
+
+
+#############################################
+# Link the executable Course\StackQueueArray\LinkStack\LinkStack.exe
+
+build Course/StackQueueArray/LinkStack/LinkStack.exe: C_EXECUTABLE_LINKER__LinkStack_Debug Course/StackQueueArray/LinkStack/CMakeFiles/LinkStack.dir/LinkStack.c.obj Course/StackQueueArray/LinkStack/CMakeFiles/LinkStack.dir/main.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\StackQueueArray\LinkStack\CMakeFiles\LinkStack.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\StackQueueArray\LinkStack\LinkStack.exe
+  TARGET_IMPLIB = Course\StackQueueArray\LinkStack\libLinkStack.dll.a
+  TARGET_PDB = LinkStack.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/StackQueueArray/LinkStack/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\LinkStack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/StackQueueArray/LinkStack/edit_cache: phony Course/StackQueueArray/LinkStack/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/StackQueueArray/LinkStack/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\LinkStack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/StackQueueArray/LinkStack/rebuild_cache: phony Course/StackQueueArray/LinkStack/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/StackQueueArray/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ShareStack
+
+
+#############################################
+# Order-only phony target for ShareStack
+
+build cmake_object_order_depends_target_ShareStack: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/StackQueueArray/ShareStack/CMakeFiles/ShareStack.dir/ShareStack.c.obj: C_COMPILER__ShareStack_Debug E$:/Project/DataStructure/Course/StackQueueArray/ShareStack/ShareStack.c || cmake_object_order_depends_target_ShareStack
+  DEP_FILE = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir\ShareStack.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir
+
+build Course/StackQueueArray/ShareStack/CMakeFiles/ShareStack.dir/main.c.obj: C_COMPILER__ShareStack_Debug E$:/Project/DataStructure/Course/StackQueueArray/ShareStack/main.c || cmake_object_order_depends_target_ShareStack
+  DEP_FILE = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ShareStack
+
+
+#############################################
+# Link the executable Course\StackQueueArray\ShareStack\ShareStack.exe
+
+build Course/StackQueueArray/ShareStack/ShareStack.exe: C_EXECUTABLE_LINKER__ShareStack_Debug Course/StackQueueArray/ShareStack/CMakeFiles/ShareStack.dir/ShareStack.c.obj Course/StackQueueArray/ShareStack/CMakeFiles/ShareStack.dir/main.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\StackQueueArray\ShareStack\CMakeFiles\ShareStack.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\StackQueueArray\ShareStack\ShareStack.exe
+  TARGET_IMPLIB = Course\StackQueueArray\ShareStack\libShareStack.dll.a
+  TARGET_PDB = ShareStack.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/StackQueueArray/ShareStack/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\ShareStack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/StackQueueArray/ShareStack/edit_cache: phony Course/StackQueueArray/ShareStack/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/StackQueueArray/ShareStack/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\ShareStack && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/StackQueueArray/ShareStack/rebuild_cache: phony Course/StackQueueArray/ShareStack/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/StackQueueArray/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Queue
+
+
+#############################################
+# Order-only phony target for Queue
+
+build cmake_object_order_depends_target_Queue: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/StackQueueArray/Queue/CMakeFiles/Queue.dir/Queue.c.obj: C_COMPILER__Queue_Debug E$:/Project/DataStructure/Course/StackQueueArray/Queue/Queue.c || cmake_object_order_depends_target_Queue
+  DEP_FILE = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir\Queue.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir
+
+build Course/StackQueueArray/Queue/CMakeFiles/Queue.dir/main.c.obj: C_COMPILER__Queue_Debug E$:/Project/DataStructure/Course/StackQueueArray/Queue/main.c || cmake_object_order_depends_target_Queue
+  DEP_FILE = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir
+  OBJECT_FILE_DIR = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Queue
+
+
+#############################################
+# Link the executable Course\StackQueueArray\Queue\Queue.exe
+
+build Course/StackQueueArray/Queue/Queue.exe: C_EXECUTABLE_LINKER__Queue_Debug Course/StackQueueArray/Queue/CMakeFiles/Queue.dir/Queue.c.obj Course/StackQueueArray/Queue/CMakeFiles/Queue.dir/main.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\StackQueueArray\Queue\CMakeFiles\Queue.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\StackQueueArray\Queue\Queue.exe
+  TARGET_IMPLIB = Course\StackQueueArray\Queue\libQueue.dll.a
+  TARGET_PDB = Queue.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/StackQueueArray/Queue/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\Queue && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/StackQueueArray/Queue/edit_cache: phony Course/StackQueueArray/Queue/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/StackQueueArray/Queue/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\StackQueueArray\Queue && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/StackQueueArray/Queue/rebuild_cache: phony Course/StackQueueArray/Queue/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/CMakeLists.txt
+# =============================================================================
 
 
 #############################################
@@ -338,7 +619,180 @@ build Course/String/rebuild_cache: phony Course/String/CMakeFiles/rebuild_cache.
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/String/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target KMP
+
+
+#############################################
+# Order-only phony target for KMP
+
+build cmake_object_order_depends_target_KMP: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/String/KMP/CMakeFiles/KMP.dir/main.c.obj: C_COMPILER__KMP_Debug E$:/Project/DataStructure/Course/String/KMP/main.c || cmake_object_order_depends_target_KMP
+  DEP_FILE = Course\String\KMP\CMakeFiles\KMP.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\String\KMP\CMakeFiles\KMP.dir
+  OBJECT_FILE_DIR = Course\String\KMP\CMakeFiles\KMP.dir
+
+build Course/String/KMP/CMakeFiles/KMP.dir/KMP.c.obj: C_COMPILER__KMP_Debug E$:/Project/DataStructure/Course/String/KMP/KMP.c || cmake_object_order_depends_target_KMP
+  DEP_FILE = Course\String\KMP\CMakeFiles\KMP.dir\KMP.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\String\KMP\CMakeFiles\KMP.dir
+  OBJECT_FILE_DIR = Course\String\KMP\CMakeFiles\KMP.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target KMP
+
+
+#############################################
+# Link the executable Course\String\KMP\KMP.exe
+
+build Course/String/KMP/KMP.exe: C_EXECUTABLE_LINKER__KMP_Debug Course/String/KMP/CMakeFiles/KMP.dir/main.c.obj Course/String/KMP/CMakeFiles/KMP.dir/KMP.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\String\KMP\CMakeFiles\KMP.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\String\KMP\KMP.exe
+  TARGET_IMPLIB = Course\String\KMP\libKMP.dll.a
+  TARGET_PDB = KMP.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/String/KMP/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\String\KMP && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/String/KMP/edit_cache: phony Course/String/KMP/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/String/KMP/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\String\KMP && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/String/KMP/rebuild_cache: phony Course/String/KMP/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/String/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target String
+
+
+#############################################
+# Order-only phony target for String
+
+build cmake_object_order_depends_target_String: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/String/String/CMakeFiles/String.dir/main.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/String/main.c || cmake_object_order_depends_target_String
+  DEP_FILE = Course\String\String\CMakeFiles\String.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\String\String\CMakeFiles\String.dir
+  OBJECT_FILE_DIR = Course\String\String\CMakeFiles\String.dir
+
+build Course/String/String/CMakeFiles/String.dir/__/KMP/KMP.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/KMP/KMP.c || cmake_object_order_depends_target_String
+  DEP_FILE = Course\String\String\CMakeFiles\String.dir\__\KMP\KMP.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\String\String\CMakeFiles\String.dir
+  OBJECT_FILE_DIR = Course\String\String\CMakeFiles\String.dir\__\KMP
+
+build Course/String/String/CMakeFiles/String.dir/String.c.obj: C_COMPILER__String_Debug E$:/Project/DataStructure/Course/String/String/String.c || cmake_object_order_depends_target_String
+  DEP_FILE = Course\String\String\CMakeFiles\String.dir\String.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\String\String\CMakeFiles\String.dir
+  OBJECT_FILE_DIR = Course\String\String\CMakeFiles\String.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target String
+
+
+#############################################
+# Link the executable Course\String\String\String.exe
+
+build Course/String/String/String.exe: C_EXECUTABLE_LINKER__String_Debug Course/String/String/CMakeFiles/String.dir/main.c.obj Course/String/String/CMakeFiles/String.dir/__/KMP/KMP.c.obj Course/String/String/CMakeFiles/String.dir/String.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\String\String\CMakeFiles\String.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\String\String\String.exe
+  TARGET_IMPLIB = Course\String\String\libString.dll.a
+  TARGET_PDB = String.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/String/String/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\String\String && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/String/String/edit_cache: phony Course/String/String/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/String/String/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\String\String && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/String/String/rebuild_cache: phony Course/String/String/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
 # E:/Project/DataStructure/Course/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Tree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Tree/edit_cache: phony Course/Tree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Tree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Tree/rebuild_cache: phony Course/Tree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Tree/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -350,40 +804,33 @@ build Course/String/rebuild_cache: phony Course/String/CMakeFiles/rebuild_cache.
 
 build cmake_object_order_depends_target_BitTree: phony || cmake_object_order_depends_target_Global_lib
 
-build Course/BiTree/CMakeFiles/BitTree.dir/main.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/main.c || cmake_object_order_depends_target_BitTree
-  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\main.c.obj.d
+build Course/Tree/BitTree/CMakeFiles/BitTree.dir/main.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/Tree/BitTree/main.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\Tree\BitTree\CMakeFiles\BitTree.dir\main.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
 
-build Course/BiTree/CMakeFiles/BitTree.dir/BitTree.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/BitTree.c || cmake_object_order_depends_target_BitTree
-  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\BitTree.c.obj.d
+build Course/Tree/BitTree/CMakeFiles/BitTree.dir/BitTree.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/Tree/BitTree/BitTree.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\Tree\BitTree\CMakeFiles\BitTree.dir\BitTree.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
 
-build Course/BiTree/CMakeFiles/BitTree.dir/LQueue.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/LQueue.c || cmake_object_order_depends_target_BitTree
-  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\LQueue.c.obj.d
+build Course/Tree/BitTree/CMakeFiles/BitTree.dir/LinkQueue.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/Tree/BitTree/LinkQueue.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\Tree\BitTree\CMakeFiles\BitTree.dir\LinkQueue.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
 
-build Course/BiTree/CMakeFiles/BitTree.dir/Stack.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/Stack.c || cmake_object_order_depends_target_BitTree
-  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\Stack.c.obj.d
+build Course/Tree/BitTree/CMakeFiles/BitTree.dir/Stack.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/Tree/BitTree/Stack.c || cmake_object_order_depends_target_BitTree
+  DEP_FILE = Course\Tree\BitTree\CMakeFiles\BitTree.dir\Stack.c.obj.d
   FLAGS = -g -std=gnu11
   INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-
-build Course/BiTree/CMakeFiles/BitTree.dir/ChildSiblingTree.c.obj: C_COMPILER__BitTree_Debug E$:/Project/DataStructure/Course/BiTree/ChildSiblingTree.c || cmake_object_order_depends_target_BitTree
-  DEP_FILE = Course\BiTree\CMakeFiles\BitTree.dir\ChildSiblingTree.c.obj.d
-  FLAGS = -g -std=gnu11
-  INCLUDES = -IE:/Project/DataStructure/Status
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
-  OBJECT_FILE_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  OBJECT_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
+  OBJECT_FILE_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
 
 
 # =============================================================================
@@ -391,40 +838,496 @@ build Course/BiTree/CMakeFiles/BitTree.dir/ChildSiblingTree.c.obj: C_COMPILER__B
 
 
 #############################################
-# Link the executable Course\BiTree\BitTree.exe
+# Link the executable Course\Tree\BitTree\BitTree.exe
 
-build Course/BiTree/BitTree.exe: C_EXECUTABLE_LINKER__BitTree_Debug Course/BiTree/CMakeFiles/BitTree.dir/main.c.obj Course/BiTree/CMakeFiles/BitTree.dir/BitTree.c.obj Course/BiTree/CMakeFiles/BitTree.dir/LQueue.c.obj Course/BiTree/CMakeFiles/BitTree.dir/Stack.c.obj Course/BiTree/CMakeFiles/BitTree.dir/ChildSiblingTree.c.obj | Status/libGlobal_lib.a || Status/libGlobal_lib.a
+build Course/Tree/BitTree/BitTree.exe: C_EXECUTABLE_LINKER__BitTree_Debug Course/Tree/BitTree/CMakeFiles/BitTree.dir/main.c.obj Course/Tree/BitTree/CMakeFiles/BitTree.dir/BitTree.c.obj Course/Tree/BitTree/CMakeFiles/BitTree.dir/LinkQueue.c.obj Course/Tree/BitTree/CMakeFiles/BitTree.dir/Stack.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
   FLAGS = -g
-  LINK_LIBRARIES = Status/libGlobal_lib.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = Course\BiTree\CMakeFiles\BitTree.dir
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Tree\BitTree\CMakeFiles\BitTree.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Course\BiTree\BitTree.exe
-  TARGET_IMPLIB = Course\BiTree\libBitTree.dll.a
+  TARGET_FILE = Course\Tree\BitTree\BitTree.exe
+  TARGET_IMPLIB = Course\Tree\BitTree\libBitTree.dll.a
   TARGET_PDB = BitTree.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build Course/BiTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\BiTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+build Course/Tree/BitTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\BitTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build Course/BiTree/edit_cache: phony Course/BiTree/CMakeFiles/edit_cache.util
+build Course/Tree/BitTree/edit_cache: phony Course/Tree/BitTree/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build Course/BiTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\BiTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+build Course/Tree/BitTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\BitTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Course/BiTree/rebuild_cache: phony Course/BiTree/CMakeFiles/rebuild_cache.util
+build Course/Tree/BitTree/rebuild_cache: phony Course/Tree/BitTree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Tree/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Set
+
+
+#############################################
+# Order-only phony target for Set
+
+build cmake_object_order_depends_target_Set: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Tree/Set/CMakeFiles/Set.dir/main.c.obj: C_COMPILER__Set_Debug E$:/Project/DataStructure/Course/Tree/Set/main.c || cmake_object_order_depends_target_Set
+  DEP_FILE = Course\Tree\Set\CMakeFiles\Set.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\Set\CMakeFiles\Set.dir
+  OBJECT_FILE_DIR = Course\Tree\Set\CMakeFiles\Set.dir
+
+build Course/Tree/Set/CMakeFiles/Set.dir/UFSets.c.obj: C_COMPILER__Set_Debug E$:/Project/DataStructure/Course/Tree/Set/UFSets.c || cmake_object_order_depends_target_Set
+  DEP_FILE = Course\Tree\Set\CMakeFiles\Set.dir\UFSets.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\Set\CMakeFiles\Set.dir
+  OBJECT_FILE_DIR = Course\Tree\Set\CMakeFiles\Set.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Set
+
+
+#############################################
+# Link the executable Course\Tree\Set\Set.exe
+
+build Course/Tree/Set/Set.exe: C_EXECUTABLE_LINKER__Set_Debug Course/Tree/Set/CMakeFiles/Set.dir/main.c.obj Course/Tree/Set/CMakeFiles/Set.dir/UFSets.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Tree\Set\CMakeFiles\Set.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Tree\Set\Set.exe
+  TARGET_IMPLIB = Course\Tree\Set\libSet.dll.a
+  TARGET_PDB = Set.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Tree/Set/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\Set && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Tree/Set/edit_cache: phony Course/Tree/Set/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Tree/Set/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\Set && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Tree/Set/rebuild_cache: phony Course/Tree/Set/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Tree/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ChildSiblingTree
+
+
+#############################################
+# Order-only phony target for ChildSiblingTree
+
+build cmake_object_order_depends_target_ChildSiblingTree: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/main.c.obj: C_COMPILER__ChildSiblingTree_Debug E$:/Project/DataStructure/Course/Tree/ChildSiblingTree/main.c || cmake_object_order_depends_target_ChildSiblingTree
+  DEP_FILE = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+
+build Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/ChildSiblingTree.c.obj: C_COMPILER__ChildSiblingTree_Debug E$:/Project/DataStructure/Course/Tree/ChildSiblingTree/ChildSiblingTree.c || cmake_object_order_depends_target_ChildSiblingTree
+  DEP_FILE = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir\ChildSiblingTree.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+
+build Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/LinkQueue.c.obj: C_COMPILER__ChildSiblingTree_Debug E$:/Project/DataStructure/Course/Tree/ChildSiblingTree/LinkQueue.c || cmake_object_order_depends_target_ChildSiblingTree
+  DEP_FILE = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir\LinkQueue.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ChildSiblingTree
+
+
+#############################################
+# Link the executable Course\Tree\ChildSiblingTree\ChildSiblingTree.exe
+
+build Course/Tree/ChildSiblingTree/ChildSiblingTree.exe: C_EXECUTABLE_LINKER__ChildSiblingTree_Debug Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/main.c.obj Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/ChildSiblingTree.c.obj Course/Tree/ChildSiblingTree/CMakeFiles/ChildSiblingTree.dir/LinkQueue.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Tree\ChildSiblingTree\CMakeFiles\ChildSiblingTree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Tree\ChildSiblingTree\ChildSiblingTree.exe
+  TARGET_IMPLIB = Course\Tree\ChildSiblingTree\libChildSiblingTree.dll.a
+  TARGET_PDB = ChildSiblingTree.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Tree/ChildSiblingTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ChildSiblingTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Tree/ChildSiblingTree/edit_cache: phony Course/Tree/ChildSiblingTree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Tree/ChildSiblingTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ChildSiblingTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Tree/ChildSiblingTree/rebuild_cache: phony Course/Tree/ChildSiblingTree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Tree/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ThreadTree
+
+
+#############################################
+# Order-only phony target for ThreadTree
+
+build cmake_object_order_depends_target_ThreadTree: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Tree/ThreadTree/CMakeFiles/ThreadTree.dir/main.c.obj: C_COMPILER__ThreadTree_Debug E$:/Project/DataStructure/Course/Tree/ThreadTree/main.c || cmake_object_order_depends_target_ThreadTree
+  DEP_FILE = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir
+
+build Course/Tree/ThreadTree/CMakeFiles/ThreadTree.dir/ThreadBiTree.c.obj: C_COMPILER__ThreadTree_Debug E$:/Project/DataStructure/Course/Tree/ThreadTree/ThreadBiTree.c || cmake_object_order_depends_target_ThreadTree
+  DEP_FILE = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir\ThreadBiTree.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ThreadTree
+
+
+#############################################
+# Link the executable Course\Tree\ThreadTree\ThreadTree.exe
+
+build Course/Tree/ThreadTree/ThreadTree.exe: C_EXECUTABLE_LINKER__ThreadTree_Debug Course/Tree/ThreadTree/CMakeFiles/ThreadTree.dir/main.c.obj Course/Tree/ThreadTree/CMakeFiles/ThreadTree.dir/ThreadBiTree.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Tree\ThreadTree\CMakeFiles\ThreadTree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Tree\ThreadTree\ThreadTree.exe
+  TARGET_IMPLIB = Course\Tree\ThreadTree\libThreadTree.dll.a
+  TARGET_PDB = ThreadTree.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Tree/ThreadTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ThreadTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Tree/ThreadTree/edit_cache: phony Course/Tree/ThreadTree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Tree/ThreadTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ThreadTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Tree/ThreadTree/rebuild_cache: phony Course/Tree/ThreadTree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Tree/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ParentTree
+
+
+#############################################
+# Order-only phony target for ParentTree
+
+build cmake_object_order_depends_target_ParentTree: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Tree/ParentTree/CMakeFiles/ParentTree.dir/main.c.obj: C_COMPILER__ParentTree_Debug E$:/Project/DataStructure/Course/Tree/ParentTree/main.c || cmake_object_order_depends_target_ParentTree
+  DEP_FILE = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir
+
+build Course/Tree/ParentTree/CMakeFiles/ParentTree.dir/ParentTree.c.obj: C_COMPILER__ParentTree_Debug E$:/Project/DataStructure/Course/Tree/ParentTree/ParentTree.c || cmake_object_order_depends_target_ParentTree
+  DEP_FILE = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir\ParentTree.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir
+  OBJECT_FILE_DIR = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ParentTree
+
+
+#############################################
+# Link the executable Course\Tree\ParentTree\ParentTree.exe
+
+build Course/Tree/ParentTree/ParentTree.exe: C_EXECUTABLE_LINKER__ParentTree_Debug Course/Tree/ParentTree/CMakeFiles/ParentTree.dir/main.c.obj Course/Tree/ParentTree/CMakeFiles/ParentTree.dir/ParentTree.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Tree\ParentTree\CMakeFiles\ParentTree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Tree\ParentTree\ParentTree.exe
+  TARGET_IMPLIB = Course\Tree\ParentTree\libParentTree.dll.a
+  TARGET_PDB = ParentTree.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Tree/ParentTree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ParentTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Tree/ParentTree/edit_cache: phony Course/Tree/ParentTree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Tree/ParentTree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Tree\ParentTree && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Tree/ParentTree/rebuild_cache: phony Course/Tree/ParentTree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Graph/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Graph/edit_cache: phony Course/Graph/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Graph/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Graph/rebuild_cache: phony Course/Graph/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Graph/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target MGraph
+
+
+#############################################
+# Order-only phony target for MGraph
+
+build cmake_object_order_depends_target_MGraph: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Graph/MGraph/CMakeFiles/MGraph.dir/main.c.obj: C_COMPILER__MGraph_Debug E$:/Project/DataStructure/Course/Graph/MGraph/main.c || cmake_object_order_depends_target_MGraph
+  DEP_FILE = Course\Graph\MGraph\CMakeFiles\MGraph.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+  OBJECT_FILE_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+
+build Course/Graph/MGraph/CMakeFiles/MGraph.dir/MGraph.c.obj: C_COMPILER__MGraph_Debug E$:/Project/DataStructure/Course/Graph/MGraph/MGraph.c || cmake_object_order_depends_target_MGraph
+  DEP_FILE = Course\Graph\MGraph\CMakeFiles\MGraph.dir\MGraph.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+  OBJECT_FILE_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+
+build Course/Graph/MGraph/CMakeFiles/MGraph.dir/LinkQueue.c.obj: C_COMPILER__MGraph_Debug E$:/Project/DataStructure/Course/Graph/MGraph/LinkQueue.c || cmake_object_order_depends_target_MGraph
+  DEP_FILE = Course\Graph\MGraph\CMakeFiles\MGraph.dir\LinkQueue.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+  OBJECT_FILE_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MGraph
+
+
+#############################################
+# Link the executable Course\Graph\MGraph\MGraph.exe
+
+build Course/Graph/MGraph/MGraph.exe: C_EXECUTABLE_LINKER__MGraph_Debug Course/Graph/MGraph/CMakeFiles/MGraph.dir/main.c.obj Course/Graph/MGraph/CMakeFiles/MGraph.dir/MGraph.c.obj Course/Graph/MGraph/CMakeFiles/MGraph.dir/LinkQueue.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Graph\MGraph\CMakeFiles\MGraph.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Graph\MGraph\MGraph.exe
+  TARGET_IMPLIB = Course\Graph\MGraph\libMGraph.dll.a
+  TARGET_PDB = MGraph.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Graph/MGraph/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph\MGraph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Graph/MGraph/edit_cache: phony Course/Graph/MGraph/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Graph/MGraph/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph\MGraph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Graph/MGraph/rebuild_cache: phony Course/Graph/MGraph/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/Graph/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ALGraph
+
+
+#############################################
+# Order-only phony target for ALGraph
+
+build cmake_object_order_depends_target_ALGraph: phony || cmake_object_order_depends_target_Global_lib
+
+build Course/Graph/ALGraph/CMakeFiles/ALGraph.dir/main.c.obj: C_COMPILER__ALGraph_Debug E$:/Project/DataStructure/Course/Graph/ALGraph/main.c || cmake_object_order_depends_target_ALGraph
+  DEP_FILE = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir
+  OBJECT_FILE_DIR = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir
+
+build Course/Graph/ALGraph/CMakeFiles/ALGraph.dir/ALGraph.c.obj: C_COMPILER__ALGraph_Debug E$:/Project/DataStructure/Course/Graph/ALGraph/ALGraph.c || cmake_object_order_depends_target_ALGraph
+  DEP_FILE = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir\ALGraph.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -IE:/Project/DataStructure/Status
+  OBJECT_DIR = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir
+  OBJECT_FILE_DIR = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ALGraph
+
+
+#############################################
+# Link the executable Course\Graph\ALGraph\ALGraph.exe
+
+build Course/Graph/ALGraph/ALGraph.exe: C_EXECUTABLE_LINKER__ALGraph_Debug Course/Graph/ALGraph/CMakeFiles/ALGraph.dir/main.c.obj Course/Graph/ALGraph/CMakeFiles/ALGraph.dir/ALGraph.c.obj | Status/libGlobal_lib.dll.a || Status/libGlobal_lib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = Status/libGlobal_lib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\Graph\ALGraph\CMakeFiles\ALGraph.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\Graph\ALGraph\ALGraph.exe
+  TARGET_IMPLIB = Course\Graph\ALGraph\libALGraph.dll.a
+  TARGET_PDB = ALGraph.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/Graph/ALGraph/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph\ALGraph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/Graph/ALGraph/edit_cache: phony Course/Graph/ALGraph/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/Graph/ALGraph/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\Graph\ALGraph && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/Graph/ALGraph/rebuild_cache: phony Course/Graph/ALGraph/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -457,25 +1360,69 @@ build Exercise/rebuild_cache: phony Exercise/CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build BitTree: phony Course/BiTree/BitTree.exe
+build ALGraph: phony Course/Graph/ALGraph/ALGraph.exe
 
-build BitTree.exe: phony Course/BiTree/BitTree.exe
+build ALGraph.exe: phony Course/Graph/ALGraph/ALGraph.exe
 
-build Global_lib: phony Status/libGlobal_lib.a
+build BitTree: phony Course/Tree/BitTree/BitTree.exe
+
+build BitTree.exe: phony Course/Tree/BitTree/BitTree.exe
+
+build ChildSiblingTree: phony Course/Tree/ChildSiblingTree/ChildSiblingTree.exe
+
+build ChildSiblingTree.exe: phony Course/Tree/ChildSiblingTree/ChildSiblingTree.exe
+
+build Global_lib: phony Status/libGlobal_lib.dll
+
+build KMP: phony Course/String/KMP/KMP.exe
+
+build KMP.exe: phony Course/String/KMP/KMP.exe
 
 build LinkList: phony Course/LinerList/LinkList.exe
 
 build LinkList.exe: phony Course/LinerList/LinkList.exe
 
-build StackQueueArray: phony Course/StackQueueArray/StackQueueArray.exe
+build LinkQueue: phony Course/StackQueueArray/LinkQueue/LinkQueue.exe
 
-build StackQueueArray.exe: phony Course/StackQueueArray/StackQueueArray.exe
+build LinkQueue.exe: phony Course/StackQueueArray/LinkQueue/LinkQueue.exe
 
-build String: phony Course/String/String.exe
+build LinkStack: phony Course/StackQueueArray/LinkStack/LinkStack.exe
 
-build String.exe: phony Course/String/String.exe
+build LinkStack.exe: phony Course/StackQueueArray/LinkStack/LinkStack.exe
 
-build libGlobal_lib.a: phony Status/libGlobal_lib.a
+build MGraph: phony Course/Graph/MGraph/MGraph.exe
+
+build MGraph.exe: phony Course/Graph/MGraph/MGraph.exe
+
+build ParentTree: phony Course/Tree/ParentTree/ParentTree.exe
+
+build ParentTree.exe: phony Course/Tree/ParentTree/ParentTree.exe
+
+build Queue: phony Course/StackQueueArray/Queue/Queue.exe
+
+build Queue.exe: phony Course/StackQueueArray/Queue/Queue.exe
+
+build Set: phony Course/Tree/Set/Set.exe
+
+build Set.exe: phony Course/Tree/Set/Set.exe
+
+build ShareStack: phony Course/StackQueueArray/ShareStack/ShareStack.exe
+
+build ShareStack.exe: phony Course/StackQueueArray/ShareStack/ShareStack.exe
+
+build Stack: phony Course/StackQueueArray/Stack/Stack.exe
+
+build Stack.exe: phony Course/StackQueueArray/Stack/Stack.exe
+
+build String: phony Course/String/String/String.exe
+
+build String.exe: phony Course/String/String/String.exe
+
+build ThreadTree: phony Course/Tree/ThreadTree/ThreadTree.exe
+
+build ThreadTree.exe: phony Course/Tree/ThreadTree/ThreadTree.exe
+
+build libGlobal_lib.dll: phony Status/libGlobal_lib.dll
 
 # =============================================================================
 # Folder targets.
@@ -492,14 +1439,28 @@ build all: phony Status/all Course/all Exercise/all
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course
 
-build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all Course/BiTree/all
+build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all Course/Tree/all Course/Graph/all
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Project/DataStructure/cmake-build-debug/Course/BiTree
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Graph
 
-build Course/BiTree/all: phony Course/BiTree/BitTree.exe
+build Course/Graph/all: phony Course/Graph/MGraph/all Course/Graph/ALGraph/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Graph/ALGraph
+
+build Course/Graph/ALGraph/all: phony Course/Graph/ALGraph/ALGraph.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Graph/MGraph
+
+build Course/Graph/MGraph/all: phony Course/Graph/MGraph/MGraph.exe
 
 # =============================================================================
 
@@ -513,14 +1474,105 @@ build Course/LinerList/all: phony Course/LinerList/LinkList.exe
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray
 
-build Course/StackQueueArray/all: phony Course/StackQueueArray/StackQueueArray.exe
+build Course/StackQueueArray/all: phony Course/StackQueueArray/Stack/all Course/StackQueueArray/LinkQueue/all Course/StackQueueArray/LinkStack/all Course/StackQueueArray/ShareStack/all Course/StackQueueArray/Queue/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/LinkQueue
+
+build Course/StackQueueArray/LinkQueue/all: phony Course/StackQueueArray/LinkQueue/LinkQueue.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/LinkStack
+
+build Course/StackQueueArray/LinkStack/all: phony Course/StackQueueArray/LinkStack/LinkStack.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/Queue
+
+build Course/StackQueueArray/Queue/all: phony Course/StackQueueArray/Queue/Queue.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/ShareStack
+
+build Course/StackQueueArray/ShareStack/all: phony Course/StackQueueArray/ShareStack/ShareStack.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/StackQueueArray/Stack
+
+build Course/StackQueueArray/Stack/all: phony Course/StackQueueArray/Stack/Stack.exe
 
 # =============================================================================
 
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course/String
 
-build Course/String/all: phony Course/String/String.exe
+build Course/String/all: phony Course/String/KMP/all Course/String/String/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/String/KMP
+
+build Course/String/KMP/all: phony Course/String/KMP/KMP.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/String/String
+
+build Course/String/String/all: phony Course/String/String/String.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree
+
+build Course/Tree/all: phony Course/Tree/BitTree/all Course/Tree/Set/all Course/Tree/ChildSiblingTree/all Course/Tree/ThreadTree/all Course/Tree/ParentTree/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree/BitTree
+
+build Course/Tree/BitTree/all: phony Course/Tree/BitTree/BitTree.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree/ChildSiblingTree
+
+build Course/Tree/ChildSiblingTree/all: phony Course/Tree/ChildSiblingTree/ChildSiblingTree.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree/ParentTree
+
+build Course/Tree/ParentTree/all: phony Course/Tree/ParentTree/ParentTree.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree/Set
+
+build Course/Tree/Set/all: phony Course/Tree/Set/Set.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/Tree/ThreadTree
+
+build Course/Tree/ThreadTree/all: phony Course/Tree/ThreadTree/ThreadTree.exe
 
 # =============================================================================
 
@@ -534,7 +1586,7 @@ build Exercise/all: phony
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Status
 
-build Status/all: phony Status/libGlobal_lib.a
+build Status/all: phony Status/libGlobal_lib.dll
 
 # =============================================================================
 # Built-in targets
@@ -543,14 +1595,14 @@ build Status/all: phony Status/libGlobal_lib.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/BiTree/CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../Course/BiTree/CMakeLists.txt ../Course/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/String/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt ../Status/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

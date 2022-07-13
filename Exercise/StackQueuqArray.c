@@ -8,17 +8,17 @@
 #include "Exercise.h"
 bool EnQueue(SqStack *S1,SqStack *S2,ElemType e)
 {
-    if(!SOverFlow(*S1)) // S1Î´ÂúÖ´ĞĞ
+    if(!SOverFlow(*S1)) // S1æœªæ»¡æ‰§è¡Œ
     {
         Push(S1,e);
         return true;
     }
-    if(SOverFlow(*S1) && !SEmpty(*S2)) // S1ÂúÇÒS2·Ç¿Õ
+    if(SOverFlow(*S1) && !SEmpty(*S2)) // S1æ»¡ä¸”S2éç©º
     {
-        printf("¶ÓÁĞÂú\n");
+        printf("é˜Ÿåˆ—æ»¡\n");
         return false;
     }
-    if(SOverFlow(*S1) && SEmpty(*S2)) // S1ÂúÇÒS2¿Õ
+    if(SOverFlow(*S1) && SEmpty(*S2)) // S1æ»¡ä¸”S2ç©º
     {
         while (SEmpty(*S1) != true)
         {
@@ -26,31 +26,31 @@ bool EnQueue(SqStack *S1,SqStack *S2,ElemType e)
             Push(S2,e);
         }
     }
-    Push(S1,e); // if1/if2ÅĞ¶Ï¶¼Î´½øÈë,if3Ö´ĞĞµÄÊÇS1ÂúÇÒS2¿ÕµÄÇé¿ö½«ÔªËØÈ«²¿³öÕ»ÈëÕ»µ½S2,ĞèÒªÕâÒ»¾ä½«×¼±¸ÈëÕ»µÄÔªËØÈëÕ».
+    Push(S1,e); // if1/if2åˆ¤æ–­éƒ½æœªè¿›å…¥,if3æ‰§è¡Œçš„æ˜¯S1æ»¡ä¸”S2ç©ºçš„æƒ…å†µå°†å…ƒç´ å…¨éƒ¨å‡ºæ ˆå…¥æ ˆåˆ°S2,éœ€è¦è¿™ä¸€å¥å°†å‡†å¤‡å…¥æ ˆçš„å…ƒç´ å…¥æ ˆ.
     return true;
 }
 
 bool DeQueue(SqStack *S1,SqStack *S2,ElemType *e)
 {
-    if(!SEmpty(*S2)) // Õ»S2ÖĞÔªËØ³ö¶Ó
+    if(!SEmpty(*S2)) // æ ˆS2ä¸­å…ƒç´ å‡ºé˜Ÿ
     {
         Pop(S1,e);
     }
-    else if(SEmpty(*S1)) // Õ»S1¿Õ
+    else if(SEmpty(*S1)) // æ ˆS1ç©º
     {
-        printf("¶ÓÁĞ¿Õ\n");
+        printf("é˜Ÿåˆ—ç©º\n");
     }
     else
     {
-        while(!SEmpty(*S1)) // Õ»S1ÖĞ»¹ÓĞÔªËØ -- ½«ËûÃÇÂ½ĞøËÍÈëµ½S2ÖĞ·½±ãÏÂ´ÎÖ±½Ó³ö¶Ó
+        while(!SEmpty(*S1)) // æ ˆS1ä¸­è¿˜æœ‰å…ƒç´  -- å°†ä»–ä»¬é™†ç»­é€å…¥åˆ°S2ä¸­æ–¹ä¾¿ä¸‹æ¬¡ç›´æ¥å‡ºé˜Ÿ
         {
             Pop(S1,e);
             Push(S2,*e);
         }
     }
     Pop(S2,e);
-    // if1Î´½øÈë,else if½øÈë ==>´ú±íS2ÖĞÏÖÔÚÃ»ÓĞÔªËØ¿ÉÒÔPop,else ÓÖ½«S1ÖĞµÄËùÓĞÔªËØ³öÕ»ÈëÕ»µ½S2,
-    // ´Ë¾ä´ËÊ±Ö´ĞĞÊ¼ÖÕ²»»áµ¼ÖÂÖ´ĞĞºóÃ»ÓĞPopÔªËØ.
+    // if1æœªè¿›å…¥,else ifè¿›å…¥ ==>ä»£è¡¨S2ä¸­ç°åœ¨æ²¡æœ‰å…ƒç´ å¯ä»¥Pop,else åˆå°†S1ä¸­çš„æ‰€æœ‰å…ƒç´ å‡ºæ ˆå…¥æ ˆåˆ°S2,
+    // æ­¤å¥æ­¤æ—¶æ‰§è¡Œå§‹ç»ˆä¸ä¼šå¯¼è‡´æ‰§è¡Œåæ²¡æœ‰Popå…ƒç´ .
     return true;
 }
 
@@ -72,7 +72,7 @@ bool SEmpty(SqStack S)
 
 bool SOverFlow(SqStack S)
 {
-    if(S.top == Maxsize -1)//Âú
+    if(S.top == Maxsize -1)//æ»¡
         return true;
     else
         return false;
@@ -80,7 +80,7 @@ bool SOverFlow(SqStack S)
 
 bool Push(SqStack *S,ElemType e)
 {
-    if((*S).top == Maxsize -1)//Âú
+    if((*S).top == Maxsize -1)//æ»¡
         return false;
     (*S).data[++(*S).top] = e;
     return true;
@@ -88,7 +88,7 @@ bool Push(SqStack *S,ElemType e)
 
 bool Pop(SqStack *S,ElemType *e)
 {
-    if((*S).top == -1)//¿Õ
+    if((*S).top == -1)//ç©º
         return false;
     (*e) = (*S).data[(*S).top--];
     return true;
@@ -124,7 +124,7 @@ bool MatchKuoHao(char *str)
     S1.top = -1;
     int i = 0;
     char e;
-    // Ñ­»·Æ¥Åä
+    // å¾ªç¯åŒ¹é…
     while (str[i] != '\0')
     {
         switch (str[i])
@@ -156,7 +156,7 @@ bool MatchKuoHao(char *str)
         }
         i++;
     }
-    // ²é¿´ÊÇ·ñÍêÈ«Æ¥Åä
+    // æŸ¥çœ‹æ˜¯å¦å®Œå…¨åŒ¹é…
     if(CEmpty(S1))
         return true;
     else
@@ -167,18 +167,18 @@ bool TrainArrange(char *train)
 {
     SqStack1 S1;
     char *p = train,*q = train,c;
-    // H:Ó²×ù;S:Èí×ù
+    // H:ç¡¬åº§;S:è½¯åº§
     S1.top = -1;
     while (*p)
     {
         if(*p == 'H')
         {
-            PushC(&S1,*p); //½«Ó²×ùÈëÕ»
+            PushC(&S1,*p); //å°†ç¡¬åº§å…¥æ ˆ
             printf("%c\n",*p);
         }
         else
         {
-            *(q++) = *p; // ¶ÔÒÑ¾­¼ì²é³öÀ´µÄÈí×ù½øĞĞ±àÅÅ -- ´Ë¾ä»á±¨ÄÚ´æ·ÃÎÊµÄ´íÎóÉ÷ÓÃ¡£
+            *(q++) = *p; // å¯¹å·²ç»æ£€æŸ¥å‡ºæ¥çš„è½¯åº§è¿›è¡Œç¼–æ’ -- æ­¤å¥ä¼šæŠ¥å†…å­˜è®¿é—®çš„é”™è¯¯æ…ç”¨ã€‚
             printf("%c\n",*q);
         }
 
@@ -188,7 +188,7 @@ bool TrainArrange(char *train)
     {
         PopC(&S1,&c);
         printf("pop e:%c\n",c);
-        *(q++) = c; // ½«Ó²×ù½ÖÉÏÈí×ù
+        *(q++) = c; // å°†ç¡¬åº§è¡—ä¸Šè½¯åº§
         printf("q:%s",q);
     }
     return true;

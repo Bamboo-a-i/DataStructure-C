@@ -18,34 +18,34 @@ bool R_Print(LinkList L)
 
 LinkList Delete_MinNode(LinkList *L)
 {
-    LNode *pre = (*L),*p = pre->next; // ¼ÇÂ¼Ç°½áµãºÍµ±Ç°±È½Ï½áµã
-    LNode *minPre = pre,*minP = p; // ¼ÇÂ¼×îĞ¡½áµãÇ°ÇıºÍ½áµã
+    LNode *pre = (*L),*p = pre->next; // è®°å½•å‰ç»“ç‚¹å’Œå½“å‰æ¯”è¾ƒç»“ç‚¹
+    LNode *minPre = pre,*minP = p; // è®°å½•æœ€å°ç»“ç‚¹å‰é©±å’Œç»“ç‚¹
     while (p != NULL)
     {
         if(p->data < minP->data)
         {
-            minP = p; // Âú×ãĞ¡ÓÚµÄÒªÇó¸üĞÂ
+            minP = p; // æ»¡è¶³å°äºçš„è¦æ±‚æ›´æ–°
             minPre = pre;
         }
-        pre = p; // ²»Âú×ãÒªÇó£¬ÏòÇ°ÒÆ¶¯
+        pre = p; // ä¸æ»¡è¶³è¦æ±‚ï¼Œå‘å‰ç§»åŠ¨
         p = p->next;
     }
-    minPre->next = minP->next; // ¶Ï¿ªÁ¬½Ó
-    free(minP); // ÊÍ·Å
+    minPre->next = minP->next; // æ–­å¼€è¿æ¥
+    free(minP); // é‡Šæ”¾
     return (*L);
 }
 
 LinkList Reverse_LinkList1(LinkList *L)
 {
     LNode *p,*r;
-    p = (*L)->next; // Ö¸ÏòµÚÒ»¸öÔªËØ
-    (*L)->next = NULL; // Ê×½áµã±äÎªÎ²½áµã
+    p = (*L)->next; // æŒ‡å‘ç¬¬ä¸€ä¸ªå…ƒç´ 
+    (*L)->next = NULL; // é¦–ç»“ç‚¹å˜ä¸ºå°¾ç»“ç‚¹
     while (p != NULL)
     {
-        r = p->next; // »ñÈ¡ºóÇı½áµã
-        p->next = (*L)->next; // ²åÈëµ½Ê×½áµãÎ»ÖÃ
-        (*L)->next = p; // Ç°ÇıÁ¬½Ó
-        p = r; // ÏÈÇ°ÒÆ¶¯
+        r = p->next; // è·å–åé©±ç»“ç‚¹
+        p->next = (*L)->next; // æ’å…¥åˆ°é¦–ç»“ç‚¹ä½ç½®
+        (*L)->next = p; // å‰é©±è¿æ¥
+        p = r; // å…ˆå‰ç§»åŠ¨
     }
     return (*L);
 }
@@ -53,17 +53,17 @@ LinkList Reverse_LinkList1(LinkList *L)
 LinkList Reverse_LinkList2(LinkList *L)
 {
     LNode *p,*r,*pre;
-    p = (*L)->next; // Ö¸ÏòÊ×½áµã
-    r = p->next; // Ö¸ÏòµÚÒ»¸ö½áµã
-    p->next = NULL; // Öğ²½±äÎªÎ²½áµã.
+    p = (*L)->next; // æŒ‡å‘é¦–ç»“ç‚¹
+    r = p->next; // æŒ‡å‘ç¬¬ä¸€ä¸ªç»“ç‚¹
+    p->next = NULL; // é€æ­¥å˜ä¸ºå°¾ç»“ç‚¹.
     while (r !=NULL)
     {
-        pre = p; // Ç°½áµãµÈÓÚµ±Ç°½áµã
-        p = r; // ½«ºó¼Ì½áµã¸³Öµ¸øµ±Ç°½áµã
-        r = r->next; // ºó¼Ì½áµãÏòÇ°ÒÆ¶¯
-        p->next = pre; // ¿ªÊ¼½¨Á¢ÄæĞòÁ´±í¹ØÏµ
+        pre = p; // å‰ç»“ç‚¹ç­‰äºå½“å‰ç»“ç‚¹
+        p = r; // å°†åç»§ç»“ç‚¹èµ‹å€¼ç»™å½“å‰ç»“ç‚¹
+        r = r->next; // åç»§ç»“ç‚¹å‘å‰ç§»åŠ¨
+        p->next = pre; // å¼€å§‹å»ºç«‹é€†åºé“¾è¡¨å…³ç³»
     }
-    (*L)->next  = p; // Ê×½Úµã
+    (*L)->next  = p; // é¦–èŠ‚ç‚¹
     return (*L);
 }
 
@@ -72,15 +72,15 @@ void Sort(LinkList *L)
     LNode *p,*r,*pre;
     p = (*L)->next;
     r = p->next;
-    p->next = NULL; // ¸øÁ´±í(*L)ÖĞÁôÏÂÁËpºÍÍ·½áµã.  ĞÎ³É±È½ÏµÄµÚÒ»¸ö³õÊ¼ÔªËØ.
-    p = r; // Ö¸ÏòÏÂÒ»¸ö½áµã
+    p->next = NULL; // ç»™é“¾è¡¨(*L)ä¸­ç•™ä¸‹äº†på’Œå¤´ç»“ç‚¹.  å½¢æˆæ¯”è¾ƒçš„ç¬¬ä¸€ä¸ªåˆå§‹å…ƒç´ .
+    p = r; // æŒ‡å‘ä¸‹ä¸€ä¸ªç»“ç‚¹
     while (p != NULL)
     {
-        r = p->next; // Á¬½ÓpºÍºóĞø½áµãµÄ¹ØÏµ
-        pre = (*L); // ÄÃµ½½øĞĞ±È½ÏµÄÁ´±í
-        while (pre->next != NULL && pre->next->data < p->data) // ÅĞ¶ÏÇ°½áµãÖµÊÇ·ñĞ¡ÓÚºó½áµãµÄÖµ.
-            pre = pre->next; // Èç¹ûĞ¡ÓÚ 1.¿ÉÒÔ½«ÖµĞ¡µÄ½áµã±£´æÏÂÀ´. 2.Èç¹ûºóÃæ»¹ÓĞ×îĞ¡½áµã,¿ÉÒÔ½øÒ»²½ÏòÇ°ÒÆ¶¯
-        p->next = pre->next; // ´Ë´¦Ê±while½áÊøºóµÄµÚÒ»¸ö½áµã,ËµÃ÷ preÒªÃ´±£´æÁË×îĞ¡½áµã,ÒªÃ´¾ÍÊÇÏÖÓĞµÄÒÑ¾­ÅÅĞòµÄÁ´±í(*L)µÄ×îĞ¡ÔªËØ»¹´óÓÚp;
+        r = p->next; // è¿æ¥på’Œåç»­ç»“ç‚¹çš„å…³ç³»
+        pre = (*L); // æ‹¿åˆ°è¿›è¡Œæ¯”è¾ƒçš„é“¾è¡¨
+        while (pre->next != NULL && pre->next->data < p->data) // åˆ¤æ–­å‰ç»“ç‚¹å€¼æ˜¯å¦å°äºåç»“ç‚¹çš„å€¼.
+            pre = pre->next; // å¦‚æœå°äº 1.å¯ä»¥å°†å€¼å°çš„ç»“ç‚¹ä¿å­˜ä¸‹æ¥. 2.å¦‚æœåé¢è¿˜æœ‰æœ€å°ç»“ç‚¹,å¯ä»¥è¿›ä¸€æ­¥å‘å‰ç§»åŠ¨
+        p->next = pre->next; // æ­¤å¤„æ—¶whileç»“æŸåçš„ç¬¬ä¸€ä¸ªç»“ç‚¹,è¯´æ˜ preè¦ä¹ˆä¿å­˜äº†æœ€å°ç»“ç‚¹,è¦ä¹ˆå°±æ˜¯ç°æœ‰çš„å·²ç»æ’åºçš„é“¾è¡¨(*L)çš„æœ€å°å…ƒç´ è¿˜å¤§äºp;
         pre->next = p;
         p = r;
     }
@@ -90,7 +90,7 @@ LinkList LinkHeadInsert(LinkList *L)
 {
     LNode *node;
     int e;
-    (*L) = (LinkList)malloc(sizeof(LNode));//´´½¨Í·½áµã
+    (*L) = (LinkList)malloc(sizeof(LNode));//åˆ›å»ºå¤´ç»“ç‚¹
     (*L)->next = NULL;
     printf("insert e:\n");
     scanf("%d",&e);
@@ -98,8 +98,8 @@ LinkList LinkHeadInsert(LinkList *L)
     {
         node = (LNode *)malloc(sizeof(LNode *));
         node->data = e;
-        node->next = (*L)->next; // Á¬½ÓÉÏÒ»¸ö½áµã
-        (*L)->next = node; // Á¬½ÓĞÂµÄ½áµã
+        node->next = (*L)->next; // è¿æ¥ä¸Šä¸€ä¸ªç»“ç‚¹
+        (*L)->next = node; // è¿æ¥æ–°çš„ç»“ç‚¹
         printf("insert e:\n");
         scanf("%d",&e);
     }
@@ -108,7 +108,7 @@ LinkList LinkHeadInsert(LinkList *L)
 
 void PrintList(LinkList L)
 {
-    LNode *temp = L->next; // ³õÊ¼µÈÓÚÍ·½áµãµÄÏÂÒ»¸ö½áµã£¬Í·½áµãÊÇ²»´æ´¢Êı¾İµÄ
+    LNode *temp = L->next; // åˆå§‹ç­‰äºå¤´ç»“ç‚¹çš„ä¸‹ä¸€ä¸ªç»“ç‚¹ï¼Œå¤´ç»“ç‚¹æ˜¯ä¸å­˜å‚¨æ•°æ®çš„
     while(temp != NULL)
     {
         printf("nodeAddress:%p;nodee:%d\n",temp,temp->data);

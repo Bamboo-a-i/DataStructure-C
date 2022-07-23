@@ -1,0 +1,2 @@
+add_subdirectory(LinearStructure)
+add_subdirectory(TreeStructure)

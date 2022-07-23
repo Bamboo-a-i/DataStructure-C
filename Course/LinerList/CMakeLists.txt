@@ -1,7 +1,5 @@
-# 包含公共库
-include_directories(${CMAKE_SOURCE_DIR}/Status)
-
-# 生成可执行文件
-add_executable(LinkList DLinkNode.h DLinkNode.c)
-# 链接公共库
-target_link_libraries(LinkList Global_lib)
+add_subdirectory(DLinkNode)
+add_subdirectory(LDLinkList)
+add_subdirectory(LinkNode)
+add_subdirectory(LLinkList)
+add_subdirectory(NHeadLink)

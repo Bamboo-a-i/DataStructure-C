@@ -22,26 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__Global_lib_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C shared library.
-
-rule C_SHARED_LIBRARY_LINKER__Global_lib_Debug
-  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
-  description = Linking C shared library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__LinkList_Debug
+rule C_COMPILER__1-3-DLinkNode_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +32,83 @@ rule C_COMPILER__LinkList_Debug
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__LinkList_Debug
+rule C_EXECUTABLE_LINKER__1-3-DLinkNode_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__1-5-LDLinkList_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__1-5-LDLinkList_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__1-2-LinkNode_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__1-2-LinkNode_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__1-4-LLinkList_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__1-4-LLinkList_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__1-6-NHeadLink_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__1-6-NHeadLink_Debug
   command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -318,6 +375,44 @@ rule C_COMPILER__ALGraph_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__ALGraph_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__6-1-LinearStructure_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__6-1-LinearStructure_Debug
+  command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__6-2-TreeStructure_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__6-2-TreeStructure_Debug
   command = cmd.exe /C "$PRE_LINK && "E:\Program Files\JetBrains\CLion 2022.1\bin\mingw\bin\gcc.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT

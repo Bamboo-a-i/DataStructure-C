@@ -1,0 +1,1 @@
+add_executable(6-2-TreeStructure main.c BinarySearchTree.c BinarySearchTree.h)

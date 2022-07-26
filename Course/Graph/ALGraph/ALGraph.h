@@ -4,7 +4,6 @@
 
 #ifndef DATASTRUCTURE_ALGRAPH_H
 #define DATASTRUCTURE_ALGRAPH_H
-#include "Status.h"
 #define MaxVertexNum 100
 /*
  * 邻接表示法数据结构

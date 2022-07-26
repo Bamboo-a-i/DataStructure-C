@@ -9,7 +9,7 @@
 					"childIndexes" : 
 					[
 						1,
-						29
+						31
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -28,7 +28,8 @@
 						14,
 						17,
 						23,
-						26
+						26,
+						29
 					],
 					"jsonFile" : "directory-Course-Debug-1cf68e738167696f30d2.json",
 					"minimumCMakeVersion" : 
@@ -164,7 +165,7 @@
 					"source" : "Course/StackQueueArray/Stack",
 					"targetIndexes" : 
 					[
-						18
+						19
 					]
 				},
 				{
@@ -179,7 +180,7 @@
 					"source" : "Course/StackQueueArray/LinkQueue",
 					"targetIndexes" : 
 					[
-						11
+						12
 					]
 				},
 				{
@@ -194,7 +195,7 @@
 					"source" : "Course/StackQueueArray/LinkStack",
 					"targetIndexes" : 
 					[
-						12
+						13
 					]
 				},
 				{
@@ -209,7 +210,7 @@
 					"source" : "Course/StackQueueArray/ShareStack",
 					"targetIndexes" : 
 					[
-						17
+						18
 					]
 				},
 				{
@@ -224,7 +225,7 @@
 					"source" : "Course/StackQueueArray/Queue",
 					"targetIndexes" : 
 					[
-						15
+						16
 					]
 				},
 				{
@@ -255,7 +256,7 @@
 					"source" : "Course/String/KMP",
 					"targetIndexes" : 
 					[
-						10
+						11
 					]
 				},
 				{
@@ -270,7 +271,7 @@
 					"source" : "Course/String/String",
 					"targetIndexes" : 
 					[
-						19
+						20
 					]
 				},
 				{
@@ -304,7 +305,7 @@
 					"source" : "Course/Tree/BitTree",
 					"targetIndexes" : 
 					[
-						8
+						9
 					]
 				},
 				{
@@ -319,7 +320,7 @@
 					"source" : "Course/Tree/Set",
 					"targetIndexes" : 
 					[
-						16
+						17
 					]
 				},
 				{
@@ -334,7 +335,7 @@
 					"source" : "Course/Tree/ChildSiblingTree",
 					"targetIndexes" : 
 					[
-						9
+						10
 					]
 				},
 				{
@@ -349,7 +350,7 @@
 					"source" : "Course/Tree/ThreadTree",
 					"targetIndexes" : 
 					[
-						20
+						21
 					]
 				},
 				{
@@ -364,7 +365,7 @@
 					"source" : "Course/Tree/ParentTree",
 					"targetIndexes" : 
 					[
-						14
+						15
 					]
 				},
 				{
@@ -395,7 +396,7 @@
 					"source" : "Course/Graph/MGraph",
 					"targetIndexes" : 
 					[
-						13
+						14
 					]
 				},
 				{
@@ -410,7 +411,7 @@
 					"source" : "Course/Graph/ALGraph",
 					"targetIndexes" : 
 					[
-						7
+						8
 					]
 				},
 				{
@@ -460,6 +461,36 @@
 					]
 				},
 				{
+					"build" : "Course/SortAlgorithm",
+					"childIndexes" : 
+					[
+						30
+					],
+					"jsonFile" : "directory-Course.SortAlgorithm-Debug-c483661a543f444734ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "Course/SortAlgorithm"
+				},
+				{
+					"build" : "Course/SortAlgorithm/InsertSort",
+					"jsonFile" : "directory-Course.SortAlgorithm.InsertSort-Debug-b14be62f19baaca3f3a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 29,
+					"projectIndex" : 0,
+					"source" : "Course/SortAlgorithm/InsertSort",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
 					"build" : "Exercise",
 					"jsonFile" : "directory-Exercise-Debug-d78d5024e7b0d511a27a.json",
 					"minimumCMakeVersion" : 
@@ -506,7 +537,9 @@
 						26,
 						27,
 						28,
-						29
+						29,
+						30,
+						31
 					],
 					"name" : "DataStructure",
 					"targetIndexes" : 
@@ -531,7 +564,8 @@
 						17,
 						18,
 						19,
-						20
+						20,
+						21
 					]
 				}
 			],
@@ -584,6 +618,13 @@
 					"id" : "6-2-TreeStructure::@19ca2ca76d53c782379d",
 					"jsonFile" : "target-6-2-TreeStructure-Debug-46a5e2fd5f49ce8e8ecd.json",
 					"name" : "6-2-TreeStructure",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "7-1-InsertSort::@60fa20c01cf4f04a7881",
+					"jsonFile" : "target-7-1-InsertSort-Debug-0cfad1d0c6b951323239.json",
+					"name" : "7-1-InsertSort",
 					"projectIndex" : 0
 				},
 				{

@@ -186,6 +186,12 @@
 			"path" : "Course/SearchAlgorithm/TreeStructure/CMakeLists.txt"
 		},
 		{
+			"path" : "Course/SortAlgorithm/CMakeLists.txt"
+		},
+		{
+			"path" : "Course/SortAlgorithm/InsertSort/CMakeLists.txt"
+		},
+		{
 			"path" : "Exercise/CMakeLists.txt"
 		}
 	],

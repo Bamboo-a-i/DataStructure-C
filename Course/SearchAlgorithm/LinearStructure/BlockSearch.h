@@ -5,17 +5,17 @@
 #ifndef DATASTRUCTURE_BLOCKSEARCH_H
 #define DATASTRUCTURE_BLOCKSEARCH_H
 typedef int ElemType;
-// ·Ö¿éË÷Òı½á¹¹
+// åˆ†å—ç´¢å¼•ç»“æ„
 typedef struct
 {
-    ElemType maxValue; // ·Ö¿éÖĞµÄ×î´óÖµ
-    int low,high; // Ë÷Òı
+    ElemType maxValue; // åˆ†å—ä¸­çš„æœ€å¤§å€¼
+    int low,high; // ç´¢å¼•
 }Index;
 
 
 
-// Ë÷ÒıºÍÁĞ±íÈ«²¿²ÉÓÃË³Ğò²éÕÒ
+// ç´¢å¼•å’Œåˆ—è¡¨å…¨éƒ¨é‡‡ç”¨é¡ºåºæŸ¥æ‰¾
 int SSBlockSearch(Index *index,const ElemType *list,ElemType key);
-// Ë÷Òı²ÉÓÃÕÛ°ë²éÕÒÁĞ±í²ÉÓÃË³Ğò²éÕÒ
+// ç´¢å¼•é‡‡ç”¨æŠ˜åŠæŸ¥æ‰¾åˆ—è¡¨é‡‡ç”¨é¡ºåºæŸ¥æ‰¾
 int SBBlockSearch(Index *index,const ElemType *list,ElemType key);
 #endif //DATASTRUCTURE_BLOCKSEARCH_H

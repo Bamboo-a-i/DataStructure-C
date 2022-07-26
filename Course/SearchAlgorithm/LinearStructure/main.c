@@ -9,7 +9,7 @@
 int main()
 {
 
-    printf("@@1--Ë³Ğò²éÕÒ\n");
+    printf("@@1--é¡ºåºæŸ¥æ‰¾\n");
     {
         int i = 0;
         int nums[11] = {0,10,13,16,19,29,32,33,37,41,43};
@@ -19,7 +19,7 @@ int main()
         i = SearchSeq(ssTable,10);
         printf("res = %d\n",nums[i]);
     }
-    printf("@@2--ÕÛ°ë²éÕÒ\n");
+    printf("@@2--æŠ˜åŠæŸ¥æ‰¾\n");
     {
         int i = 0;
         int nums[11] = {7,10,13,16,19,29,32,33,37,41,43};
@@ -28,7 +28,7 @@ int main()
         seqList.tableLen = 11;
         BinarySearch(seqList,11);
     }
-    printf("@@3--·Ö¿é²éÕÒ\n");
+    printf("@@3--åˆ†å—æŸ¥æ‰¾\n");
     {
         int i = 0;
         ElemType list[14]= {7,10,13,19,16,20,27,22,30,40,36,43,50,48};

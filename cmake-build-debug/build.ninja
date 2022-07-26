@@ -1743,6 +1743,113 @@ build Course/SearchAlgorithm/TreeStructure/rebuild_cache: phony Course/SearchAlg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/SortAlgorithm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\SortAlgorithm && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/SortAlgorithm/edit_cache: phony Course/SortAlgorithm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/SortAlgorithm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\SortAlgorithm && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/SortAlgorithm/rebuild_cache: phony Course/SortAlgorithm/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Project/DataStructure/Course/SortAlgorithm/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 7-1-InsertSort
+
+
+#############################################
+# Order-only phony target for 7-1-InsertSort
+
+build cmake_object_order_depends_target_7-1-InsertSort: phony || Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/main.c.obj: C_COMPILER__7-1-InsertSort_Debug E$:/Project/DataStructure/Course/SortAlgorithm/InsertSort/main.c || cmake_object_order_depends_target_7-1-InsertSort
+  DEP_FILE = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir\main.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+  OBJECT_FILE_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/InsertSort.c.obj: C_COMPILER__7-1-InsertSort_Debug E$:/Project/DataStructure/Course/SortAlgorithm/InsertSort/InsertSort.c || cmake_object_order_depends_target_7-1-InsertSort
+  DEP_FILE = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir\InsertSort.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+  OBJECT_FILE_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/BinaryInsert.c.obj: C_COMPILER__7-1-InsertSort_Debug E$:/Project/DataStructure/Course/SortAlgorithm/InsertSort/BinaryInsert.c || cmake_object_order_depends_target_7-1-InsertSort
+  DEP_FILE = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir\BinaryInsert.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+  OBJECT_FILE_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/ShellSort.c.obj: C_COMPILER__7-1-InsertSort_Debug E$:/Project/DataStructure/Course/SortAlgorithm/InsertSort/ShellSort.c || cmake_object_order_depends_target_7-1-InsertSort
+  DEP_FILE = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir\ShellSort.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+  OBJECT_FILE_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 7-1-InsertSort
+
+
+#############################################
+# Link the executable Course\SortAlgorithm\InsertSort\7-1-InsertSort.exe
+
+build Course/SortAlgorithm/InsertSort/7-1-InsertSort.exe: C_EXECUTABLE_LINKER__7-1-InsertSort_Debug Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/main.c.obj Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/InsertSort.c.obj Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/BinaryInsert.c.obj Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir/ShellSort.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = Course\SortAlgorithm\InsertSort\CMakeFiles\7-1-InsertSort.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course\SortAlgorithm\InsertSort\7-1-InsertSort.exe
+  TARGET_IMPLIB = Course\SortAlgorithm\InsertSort\lib7-1-InsertSort.dll.a
+  TARGET_PDB = 7-1-InsertSort.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\SortAlgorithm\InsertSort && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Course/SortAlgorithm/InsertSort/edit_cache: phony Course/SortAlgorithm/InsertSort/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Course/SortAlgorithm/InsertSort/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Project\DataStructure\cmake-build-debug\Course\SortAlgorithm\InsertSort && "E:\Program Files\JetBrains\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Project\DataStructure -BE:\Project\DataStructure\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Course/SortAlgorithm/InsertSort/rebuild_cache: phony Course/SortAlgorithm/InsertSort/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
 # E:/Project/DataStructure/CMakeLists.txt
 # =============================================================================
 
@@ -1799,6 +1906,10 @@ build 6-1-LinearStructure.exe: phony Course/SearchAlgorithm/LinearStructure/6-1-
 build 6-2-TreeStructure: phony Course/SearchAlgorithm/TreeStructure/6-2-TreeStructure.exe
 
 build 6-2-TreeStructure.exe: phony Course/SearchAlgorithm/TreeStructure/6-2-TreeStructure.exe
+
+build 7-1-InsertSort: phony Course/SortAlgorithm/InsertSort/7-1-InsertSort.exe
+
+build 7-1-InsertSort.exe: phony Course/SortAlgorithm/InsertSort/7-1-InsertSort.exe
 
 build ALGraph: phony Course/Graph/ALGraph/ALGraph.exe
 
@@ -1871,7 +1982,7 @@ build all: phony Course/all Exercise/all
 #############################################
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course
 
-build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all Course/Tree/all Course/Graph/all Course/SearchAlgorithm/all
+build Course/all: phony Course/LinerList/all Course/StackQueueArray/all Course/String/all Course/Tree/all Course/Graph/all Course/SearchAlgorithm/all Course/SortAlgorithm/all
 
 # =============================================================================
 
@@ -1956,6 +2067,20 @@ build Course/SearchAlgorithm/LinearStructure/all: phony Course/SearchAlgorithm/L
 # Folder: E:/Project/DataStructure/cmake-build-debug/Course/SearchAlgorithm/TreeStructure
 
 build Course/SearchAlgorithm/TreeStructure/all: phony Course/SearchAlgorithm/TreeStructure/6-2-TreeStructure.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm
+
+build Course/SortAlgorithm/all: phony Course/SortAlgorithm/InsertSort/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/InsertSort
+
+build Course/SortAlgorithm/InsertSort/all: phony Course/SortAlgorithm/InsertSort/7-1-InsertSort.exe
 
 # =============================================================================
 
@@ -2076,14 +2201,14 @@ build Exercise/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/LinerList/DLinkNode/CMakeLists.txt ../Course/LinerList/LDLinkList/CMakeLists.txt ../Course/LinerList/LLinkList/CMakeLists.txt ../Course/LinerList/LinkNode/CMakeLists.txt ../Course/LinerList/NHeadLink/CMakeLists.txt ../Course/SearchAlgorithm/CMakeLists.txt ../Course/SearchAlgorithm/LinearStructure/CMakeLists.txt ../Course/SearchAlgorithm/TreeStructure/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/LinerList/DLinkNode/CMakeLists.txt ../Course/LinerList/LDLinkList/CMakeLists.txt ../Course/LinerList/LLinkList/CMakeLists.txt ../Course/LinerList/LinkNode/CMakeLists.txt ../Course/LinerList/NHeadLink/CMakeLists.txt ../Course/SearchAlgorithm/CMakeLists.txt ../Course/SearchAlgorithm/LinearStructure/CMakeLists.txt ../Course/SearchAlgorithm/TreeStructure/CMakeLists.txt ../Course/SortAlgorithm/CMakeLists.txt ../Course/SortAlgorithm/InsertSort/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/LinerList/DLinkNode/CMakeLists.txt ../Course/LinerList/LDLinkList/CMakeLists.txt ../Course/LinerList/LLinkList/CMakeLists.txt ../Course/LinerList/LinkNode/CMakeLists.txt ../Course/LinerList/NHeadLink/CMakeLists.txt ../Course/SearchAlgorithm/CMakeLists.txt ../Course/SearchAlgorithm/LinearStructure/CMakeLists.txt ../Course/SearchAlgorithm/TreeStructure/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../Course/CMakeLists.txt ../Course/Graph/ALGraph/CMakeLists.txt ../Course/Graph/CMakeLists.txt ../Course/Graph/MGraph/CMakeLists.txt ../Course/LinerList/CMakeLists.txt ../Course/LinerList/DLinkNode/CMakeLists.txt ../Course/LinerList/LDLinkList/CMakeLists.txt ../Course/LinerList/LLinkList/CMakeLists.txt ../Course/LinerList/LinkNode/CMakeLists.txt ../Course/LinerList/NHeadLink/CMakeLists.txt ../Course/SearchAlgorithm/CMakeLists.txt ../Course/SearchAlgorithm/LinearStructure/CMakeLists.txt ../Course/SearchAlgorithm/TreeStructure/CMakeLists.txt ../Course/SortAlgorithm/CMakeLists.txt ../Course/SortAlgorithm/InsertSort/CMakeLists.txt ../Course/StackQueueArray/CMakeLists.txt ../Course/StackQueueArray/LinkQueue/CMakeLists.txt ../Course/StackQueueArray/LinkStack/CMakeLists.txt ../Course/StackQueueArray/Queue/CMakeLists.txt ../Course/StackQueueArray/ShareStack/CMakeLists.txt ../Course/StackQueueArray/Stack/CMakeLists.txt ../Course/String/CMakeLists.txt ../Course/String/KMP/CMakeLists.txt ../Course/String/String/CMakeLists.txt ../Course/Tree/BitTree/CMakeLists.txt ../Course/Tree/CMakeLists.txt ../Course/Tree/ChildSiblingTree/CMakeLists.txt ../Course/Tree/ParentTree/CMakeLists.txt ../Course/Tree/Set/CMakeLists.txt ../Course/Tree/ThreadTree/CMakeLists.txt ../Exercise/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake E$:/Program$ Files/JetBrains/CLion$ 2022.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

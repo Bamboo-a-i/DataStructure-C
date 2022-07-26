@@ -77,5 +77,10 @@ E:/Project/DataStructure/cmake-build-debug/Course/SearchAlgorithm/LinearStructur
 E:/Project/DataStructure/cmake-build-debug/Course/SearchAlgorithm/TreeStructure/CMakeFiles/6-2-TreeStructure.dir
 E:/Project/DataStructure/cmake-build-debug/Course/SearchAlgorithm/TreeStructure/CMakeFiles/edit_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Course/SearchAlgorithm/TreeStructure/CMakeFiles/rebuild_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/CMakeFiles/edit_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/CMakeFiles/rebuild_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/InsertSort/CMakeFiles/7-1-InsertSort.dir
+E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/InsertSort/CMakeFiles/edit_cache.dir
+E:/Project/DataStructure/cmake-build-debug/Course/SortAlgorithm/InsertSort/CMakeFiles/rebuild_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Exercise/CMakeFiles/edit_cache.dir
 E:/Project/DataStructure/cmake-build-debug/Exercise/CMakeFiles/rebuild_cache.dir

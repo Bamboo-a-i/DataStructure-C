@@ -5,15 +5,15 @@
 #ifndef DATASTRUCTURE_SEARCHSEQ_H
 #define DATASTRUCTURE_SEARCHSEQ_H
 
-// 顺序查找数据结构
+// 椤哄簭鏌ユ壘鏁版嵁缁撴瀯
 typedef int ElemType;
 typedef struct
 {
-    ElemType *elem; // 动态数组的基地址
+    ElemType *elem; // 鍔ㄦ�佹暟缁勭殑鍩哄湴鍧�
     int tableLen;
 }SSTable;
 
-// 顺序查找算法实现
+// 椤哄簭鏌ユ壘绠楁硶瀹炵幇
 int SearchSeq(SSTable ST,ElemType key);
 
 #endif //DATASTRUCTURE_SEARCHSEQ_H

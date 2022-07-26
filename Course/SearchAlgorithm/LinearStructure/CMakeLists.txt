@@ -1,4 +1,4 @@
-# Éú³É¿ÉÖ´ĞĞÎÄ¼ş
+# ç”Ÿæˆå¯æ‰§è¡Œæ–‡ä»¶
 add_executable(6-1-LinearStructure
         main.c
         SearchSeq.c SearchSeq.h

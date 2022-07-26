@@ -7,9 +7,9 @@
 typedef int ElemType;
 typedef struct
 {
-    ElemType *elem; // 动态数组的基地址
+    ElemType *elem; // 鍔ㄦ�佹暟缁勭殑鍩哄湴鍧�
     int tableLen;
 }SeqList;
-// 折半查找
+// 鎶樺崐鏌ユ壘
 int BinarySearch(SeqList SL,ElemType key);
 #endif //DATASTRUCTURE_BINARYSEARCH_H

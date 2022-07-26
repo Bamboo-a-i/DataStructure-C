@@ -12,4 +12,4 @@
 ## [4.树和二叉树](./Course/Tree/ReadMe.md)
 ## [5.图](./Course/Graph/ReadMe.md)
 ## [6.查找](./Course/SearchAlgorithm/ReadMe.md)
-## [7.排序](./)
+## [7.排序](./Course/SortAlgorithm/ReadMe.md)
